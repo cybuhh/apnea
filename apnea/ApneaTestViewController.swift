@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import Pendulum
+
+// let stopwatch = PendulumStopwatch()
+// stopwatch.start()
 
 class ApneaTestViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let stopwatch = PendulumStopwatch()
         // Do any additional setup after loading the view.
     }
 

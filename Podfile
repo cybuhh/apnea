@@ -8,5 +8,5 @@ target 'apnea' do
   use_frameworks!
 
   # Pods for apnea
-  pod 'Pendulum', '~> 1.0.1'
+  pod 'MZTimerLabel', '~> 0.5.4'
 end
