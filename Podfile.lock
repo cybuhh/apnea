@@ -1,0 +1,12 @@
+PODS:
+  - Pendulum (1.0.1)
+
+DEPENDENCIES:
+  - Pendulum (~> 1.0.1)
+
+SPEC CHECKSUMS:
+  Pendulum: ff7267efba1efa91a6b57e944c529ef42e284f51
+
+PODFILE CHECKSUM: a3d57c7d7b210ca182d7b1fff03ebd053d06f886
+
+COCOAPODS: 1.1.1
