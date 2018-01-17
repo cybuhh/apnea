@@ -7,16 +7,18 @@
 //
 
 import UIKit
-import Pendulum
+import MZTimerLabel
 
 // let stopwatch = PendulumStopwatch()
 // stopwatch.start()
 
 class ApneaTestViewController: UIViewController {
 
+    @IBOutlet weak var stoptimerLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let stopwatch = PendulumStopwatch()
+        let stopwatch = MZTimerLabel(label: stoptimerLabel)
+        stopwatch?.start()
         // Do any additional setup after loading the view.
     }
 
