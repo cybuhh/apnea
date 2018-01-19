@@ -8,12 +8,40 @@
 
 import UIKit
 
-class RootViewController: UITableViewController {
+class RootDataModel {
+    
+}
+
+class SectionItem {
+    let title: String
+    let rows: [MenuItem]
+}
+
+class RootViewModel {
+    var sectionItems: [SectionItem]?
+    
+    let dataModel= RootDataModel()
+    
+    func setup() {
+        dataModel.fetchFromDatabase {
+            sectionItems = ...
+        }
+        dataModel.fetchSomethingFromSoewgere {
+            sectionItems = costam + ...
+        }
+    }
+    
     let menuItems = [
         MenuItem(title: "Apnea Test", segueName: "ApneaTest"),
         MenuItem(title: "History", segueName: "History"),
         MenuItem(title: "Settings", segueName: "Settings")
     ]
+
+}
+
+class RootViewController: UITableViewController {
+    let viewModel = RootViewModel
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,8 +73,10 @@ class RootViewController: UITableViewController {
         self.performSegue(withIdentifier: menuItem.segueName, sender: self)
     }
 
-    //override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // if segue.identifier == ""
-    //}
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let controller = segue.destination as? ApneaTestViewController {
+            controller.title = "fo"
+        }
+    }
 
 }
