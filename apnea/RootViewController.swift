@@ -8,67 +8,32 @@
 
 import UIKit
 
-class RootDataModel {
-    
-}
-
-class SectionItem {
-    let title: String
-    let rows: [MenuItem]
-}
-
 class RootViewModel {
-    var sectionItems: [SectionItem]?
-    
-    let dataModel= RootDataModel()
-    
-    func setup() {
-        dataModel.fetchFromDatabase {
-            sectionItems = ...
-        }
-        dataModel.fetchSomethingFromSoewgere {
-            sectionItems = costam + ...
-        }
-    }
-    
-    let menuItems = [
-        MenuItem(title: "Apnea Test", segueName: "ApneaTest"),
-        MenuItem(title: "History", segueName: "History"),
-        MenuItem(title: "Settings", segueName: "Settings")
+    let rows = [
+        MenuItem(text: "Apnea Test", segueName: "ApneaTest"),
+        MenuItem(text: "History", segueName: "History"),
+        MenuItem(text: "Settings", segueName: "Settings")
     ]
-
 }
 
 class RootViewController: UITableViewController {
-    let viewModel = RootViewModel
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    let viewModel = RootViewModel()
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menuItems.count
+        return viewModel.rows.count
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RootMenuCell", for: indexPath)
         
-        let menuItem = menuItems[indexPath.row]
-        cell.textLabel?.text = menuItem.title
+        let menuItem = viewModel.rows[indexPath.row]
+        cell.textLabel?.text = menuItem.text
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let menuItem = menuItems[indexPath.row]
+        let menuItem = viewModel.rows[indexPath.row]
         print(menuItem.segueName)
         self.performSegue(withIdentifier: menuItem.segueName, sender: self)
     }

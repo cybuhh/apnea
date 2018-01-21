@@ -9,6 +9,6 @@
 import Foundation
 
 struct MenuItem {
-    var title: String
+    var text: String
     var segueName: String
 }

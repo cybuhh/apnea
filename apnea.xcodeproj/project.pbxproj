@@ -16,7 +16,8 @@
 		7116D190200EA45900C1A2A4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116D18F200EA45900C1A2A4 /* SettingsViewController.swift */; };
 		7116D192200EA48B00C1A2A4 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116D191200EA48B00C1A2A4 /* HistoryViewController.swift */; };
 		7116D194200EA9E800C1A2A4 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116D193200EA9E800C1A2A4 /* MenuItem.swift */; };
-		7116D196200EACFE00C1A2A4 /* RootTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116D195200EACFE00C1A2A4 /* RootTableCell.swift */; };
+		713C904A2014D6EC00C3BF59 /* HistoryTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713C90492014D6EC00C3BF59 /* HistoryTrainingViewController.swift */; };
+		7152C4BD2014BE5000B558CD /* HistoryApneaTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7152C4BC2014BE5000B558CD /* HistoryApneaTestViewController.swift */; };
 		BAEE7A4A98E58D0D987B0ABB /* Pods_apnea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7362CBC8B31546F76BEF5F6B /* Pods_apnea.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +33,8 @@
 		7116D18F200EA45900C1A2A4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7116D191200EA48B00C1A2A4 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		7116D193200EA9E800C1A2A4 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
-		7116D195200EACFE00C1A2A4 /* RootTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTableCell.swift; sourceTree = "<group>"; };
+		713C90492014D6EC00C3BF59 /* HistoryTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTrainingViewController.swift; sourceTree = "<group>"; };
+		7152C4BC2014BE5000B558CD /* HistoryApneaTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryApneaTestViewController.swift; sourceTree = "<group>"; };
 		7362CBC8B31546F76BEF5F6B /* Pods_apnea.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apnea.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B171803B0994323251FBBD91 /* Pods-apnea.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apnea.debug.xcconfig"; path = "Pods/Target Support Files/Pods-apnea/Pods-apnea.debug.xcconfig"; sourceTree = "<group>"; };
 		FD765F1244BE015183DEF2A5 /* Pods-apnea.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apnea.release.xcconfig"; path = "Pods/Target Support Files/Pods-apnea/Pods-apnea.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,7 +83,8 @@
 				7116D18F200EA45900C1A2A4 /* SettingsViewController.swift */,
 				7116D191200EA48B00C1A2A4 /* HistoryViewController.swift */,
 				7116D193200EA9E800C1A2A4 /* MenuItem.swift */,
-				7116D195200EACFE00C1A2A4 /* RootTableCell.swift */,
+				7152C4BC2014BE5000B558CD /* HistoryApneaTestViewController.swift */,
+				713C90492014D6EC00C3BF59 /* HistoryTrainingViewController.swift */,
 			);
 			path = apnea;
 			sourceTree = "<group>";
@@ -234,9 +237,10 @@
 			files = (
 				7116D18E200EA42100C1A2A4 /* ApneaTestViewController.swift in Sources */,
 				7116D17A200B4D5600C1A2A4 /* AppDelegate.swift in Sources */,
+				7152C4BD2014BE5000B558CD /* HistoryApneaTestViewController.swift in Sources */,
+				713C904A2014D6EC00C3BF59 /* HistoryTrainingViewController.swift in Sources */,
 				7116D18C200EA37D00C1A2A4 /* RootViewController.swift in Sources */,
 				7116D194200EA9E800C1A2A4 /* MenuItem.swift in Sources */,
-				7116D196200EACFE00C1A2A4 /* RootTableCell.swift in Sources */,
 				7116D192200EA48B00C1A2A4 /* HistoryViewController.swift in Sources */,
 				7116D190200EA45900C1A2A4 /* SettingsViewController.swift in Sources */,
 			);
