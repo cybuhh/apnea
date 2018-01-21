@@ -9,33 +9,35 @@
 import UIKit
 import MZTimerLabel
 
-// let stopwatch = PendulumStopwatch()
-// stopwatch.start()
-
 class ApneaTestViewController: UIViewController {
-
+    var stopwatch: MZTimerLabel!
+    var defaults: UserDefaults!
+    
     @IBOutlet weak var stoptimerLabel: UILabel!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let stopwatch = MZTimerLabel(label: stoptimerLabel)
-        stopwatch?.start()
-        // Do any additional setup after loading the view.
+    
+    @IBAction func startButtonClicked(_ sender: UIButton) {
+        stopwatch.start()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func stopButtonClicked(_ sender: UIButton) {
+        stopwatch.pause()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func resetButtonClicked(_ sender: UIButton) {
+        stopwatch.reset()
     }
-    */
-
+    
+    @IBAction func saveButtonClicked(_ sender: UIButton) {
+        let timeCounted = Int(stopwatch.getTimeCounted())
+        defaults.set(timeCounted, forKey: "test");
+        print("stored time: \(defaults.integer(forKey: "test"))")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        defaults = UserDefaults(suiteName: "history")
+        stopwatch = MZTimerLabel(label: stoptimerLabel)
+    }
+    
+    
 }
+
