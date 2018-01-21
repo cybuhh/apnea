@@ -28,8 +28,9 @@ class ApneaTestViewController: UIViewController {
     
     @IBAction func saveButtonClicked(_ sender: UIButton) {
         let timeCounted = Int(stopwatch.getTimeCounted())
-        defaults.set(timeCounted, forKey: "test");
-        print("stored time: \(defaults.integer(forKey: "test"))")
+        let history = defaults.array(forKey: "history-apnea") ?? []
+        defaults.set(history + [timeCounted], forKey: "history-apnea");
+        print("rows: \(defaults.array(forKey: "history-apnea")!.count)")
     }
     
     override func viewDidLoad() {
