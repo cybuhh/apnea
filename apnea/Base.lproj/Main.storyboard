@@ -194,13 +194,13 @@
         <!--Navigation Controller-->
         <scene sceneID="OHG-LB-OmP">
             <objects>
-                <navigationController toolbarHidden="NO" id="Y1W-gf-h5z" sceneMemberID="viewController">
+                <navigationController id="Y1W-gf-h5z" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6v3-SM-9on">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gZY-nA-YUu">
-                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>

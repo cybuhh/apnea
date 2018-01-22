@@ -26,7 +26,7 @@ class HistoryViewController: UIPageViewController, UIPageViewControllerDelegate,
         super.viewDidLoad()
         self.dataSource = self
         self.delegate = self
-        
+        self.view.backgroundColor = .red
         if let defaultViewController = listViewControllers.first {
             setViewControllers([defaultViewController],
                                direction: .forward,

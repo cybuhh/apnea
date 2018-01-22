@@ -10,6 +10,10 @@ import UIKit
 import MZTimerLabel
 
 class ApneaTestViewController: UIViewController {
+    
+    private enum storeKeys: String {
+        case historyApnea
+    }
     var stopwatch: MZTimerLabel!
     var defaults: UserDefaults!
     
@@ -28,9 +32,10 @@ class ApneaTestViewController: UIViewController {
     
     @IBAction func saveButtonClicked(_ sender: UIButton) {
         let timeCounted = Int(stopwatch.getTimeCounted())
-        let history = defaults.array(forKey: "history-apnea") ?? []
-        defaults.set(history + [timeCounted], forKey: "history-apnea");
-        print("rows: \(defaults.array(forKey: "history-apnea")!.count)")
+        let history = defaults.array(forKey: storeKeys.historyApnea.rawValue) ?? []
+        defaults.set(history + [timeCounted], forKey: storeKeys.historyApnea.rawValue);
+        print("rows: \(defaults.array(forKey: storeKeys.historyApnea.rawValue)!.count)")
+        defaults.synchronize()
     }
     
     override func viewDidLoad() {
