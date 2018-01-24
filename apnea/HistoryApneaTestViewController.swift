@@ -8,26 +8,31 @@
 
 import UIKit
 
-struct ApneaHistoryCell {
+/*struct ApneaHistoryCell {
     let text: String
-}
+}*/
 
 class ApneaHistoryViewModel {
-    var rows: [ApneaHistoryCell]
+    var rows: [ApneaHistoryEntry]
     
     init() {
         let apneaHistoryDataStore = ApneaHistoryDataStore()
         rows = apneaHistoryDataStore.get().map {
-            ApneaHistoryCell(text: "\($0)")
+            ApneaHistoryEntry(interval: $0.interval, date: $0.date)
         }
     }
 }
 
 class HistoryApneaTestViewControllerDataSource: NSObject, UITableViewDataSource {
     let viewModel: ApneaHistoryViewModel
+    let dateFormater: DateComponentsFormatter
     
     init(viewModel: ApneaHistoryViewModel) {
         self.viewModel = viewModel
+        self.dateFormater = DateComponentsFormatter()
+        dateFormater.unitsStyle = .abbreviated
+        dateFormater.allowedUnits = [.minute, .second]
+        dateFormater.zeroFormattingBehavior = [ .dropAll ]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,11 +40,13 @@ class HistoryApneaTestViewControllerDataSource: NSObject, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryApneTestCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryApneTestCell", for: indexPath) as! ApneaTestHistoryTableViewCell
         
         let menuItem = viewModel.rows[indexPath.row]
-        cell.textLabel?.text = menuItem.text
+        //cell.textLabel?.text = menuItem.text
+        cell.dateLabel.text = DateFormatter.localizedString(from: menuItem.date, dateStyle: DateFormatter.Style.short, timeStyle: DateFormatter.Style.none)
         
+        cell.intervalLabel.text = self.dateFormater.string(from: menuItem.interval)
         return cell
     }
 }
@@ -81,7 +88,7 @@ class HistoryApneaTestViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    /*
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.rows.count
     }
@@ -93,5 +100,5 @@ class HistoryApneaTestViewController: UITableViewController {
         cell.textLabel?.text = menuItem.text
 
         return cell
-    }
+    }*/
 }

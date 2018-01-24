@@ -13,7 +13,7 @@ struct TrainingHistoryCell {
 }
 
 class TrainingHistoryViewModel {
-    let rows = [ApneaHistoryCell(text: "test TrainingHistoryViewModel")]
+    let rows = [TrainingHistoryCell(text: "test TrainingHistoryViewModel")]
 }
 
 class HistoryTrainingtViewController: UITableViewController {
