@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F2889462018887C00AED101 /* ApneaHistoryDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2889452018887C00AED101 /* ApneaHistoryDataStore.swift */; };
 		7116D17A200B4D5600C1A2A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116D179200B4D5600C1A2A4 /* AppDelegate.swift */; };
 		7116D17F200B4D5600C1A2A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7116D17D200B4D5600C1A2A4 /* Main.storyboard */; };
 		7116D181200B4D5600C1A2A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7116D180200B4D5600C1A2A4 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F2889452018887C00AED101 /* ApneaHistoryDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApneaHistoryDataStore.swift; sourceTree = "<group>"; };
 		7116D176200B4D5600C1A2A4 /* apnea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apnea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7116D179200B4D5600C1A2A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7116D17E200B4D5600C1A2A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,6 +54,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F2889482018897300AED101 /* datastore */ = {
+			isa = PBXGroup;
+			children = (
+				4F2889452018887C00AED101 /* ApneaHistoryDataStore.swift */,
+			);
+			name = datastore;
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
 		7116D16D200B4D5600C1A2A4 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +96,7 @@
 				7116D193200EA9E800C1A2A4 /* MenuItem.swift */,
 				7152C4BC2014BE5000B558CD /* HistoryApneaTestViewController.swift */,
 				713C90492014D6EC00C3BF59 /* HistoryTrainingViewController.swift */,
+				4F2889482018897300AED101 /* datastore */,
 			);
 			path = apnea;
 			sourceTree = "<group>";
@@ -241,6 +253,7 @@
 				713C904A2014D6EC00C3BF59 /* HistoryTrainingViewController.swift in Sources */,
 				7116D18C200EA37D00C1A2A4 /* RootViewController.swift in Sources */,
 				7116D194200EA9E800C1A2A4 /* MenuItem.swift in Sources */,
+				4F2889462018887C00AED101 /* ApneaHistoryDataStore.swift in Sources */,
 				7116D192200EA48B00C1A2A4 /* HistoryViewController.swift in Sources */,
 				7116D190200EA45900C1A2A4 /* SettingsViewController.swift in Sources */,
 			);

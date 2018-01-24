@@ -11,12 +11,8 @@ import MZTimerLabel
 
 class ApneaTestViewController: UIViewController {
     var stopwatch: MZTimerLabel!
-    var defaults: UserDefaults!
+    var apenaHistoryDataStore: ApneaHistoryDataStore!
 
-    private enum storeKeys: String {
-        case historyApnea
-    }
-    
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
@@ -48,23 +44,19 @@ class ApneaTestViewController: UIViewController {
     }
     
     @IBAction func saveButtonClicked(_ sender: UIButton) {
-        let timeCounted = Int(stopwatch.getTimeCounted())
-        let history = defaults.array(forKey: storeKeys.historyApnea.rawValue) ?? []
-        defaults.set(history + [timeCounted], forKey: storeKeys.historyApnea.rawValue);
-        print("rows: \(defaults.array(forKey: storeKeys.historyApnea.rawValue)!.count)")
-        defaults.synchronize()
+        saveButton.isHidden = true
+        apenaHistoryDataStore.push(newInterval: stopwatch.getTimeCounted(), withDate: Date())
+        print("rows: \(apenaHistoryDataStore.get().count)")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        defaults = UserDefaults(suiteName: "history")
+        apenaHistoryDataStore = ApneaHistoryDataStore()
         stopwatch = MZTimerLabel(label: stoptimerLabel)
         startButton.isHidden = false
         stopButton.isHidden = true
         saveButton.isHidden = true
         resetButton.isHidden = true
     }
-    
-    
 }
 

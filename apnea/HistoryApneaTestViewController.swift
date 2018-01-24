@@ -13,10 +13,13 @@ struct ApneaHistoryCell {
 }
 
 class ApneaHistoryViewModel {
-    let rows = [ApneaHistoryCell(text: "test ApneaHistoryViewModel")]
+    var rows: [ApneaHistoryCell]
     
-    func setup() {
-        
+    init() {
+        let apneaHistoryDataStore = ApneaHistoryDataStore()
+        rows = apneaHistoryDataStore.get().map {
+            ApneaHistoryCell(text: "\($0)")
+        }
     }
 }
 
