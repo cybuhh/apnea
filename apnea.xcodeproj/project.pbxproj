@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4F2889462018887C00AED101 /* ApneaHistoryDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2889452018887C00AED101 /* ApneaHistoryDataStore.swift */; };
+		4FD5B3DD201B5BB80082FA81 /* ColorSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5B3DC201B5BB80082FA81 /* ColorSchema.swift */; };
 		4FE6C02E2018BFA8008A038A /* ApneaTestHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE6C02D2018BFA7008A038A /* ApneaTestHistoryTableViewCell.swift */; };
 		7116D17A200B4D5600C1A2A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116D179200B4D5600C1A2A4 /* AppDelegate.swift */; };
 		7116D17F200B4D5600C1A2A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7116D17D200B4D5600C1A2A4 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		4F2889452018887C00AED101 /* ApneaHistoryDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApneaHistoryDataStore.swift; sourceTree = "<group>"; };
+		4FD5B3DC201B5BB80082FA81 /* ColorSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchema.swift; sourceTree = "<group>"; };
 		4FE6C02D2018BFA7008A038A /* ApneaTestHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApneaTestHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		7116D176200B4D5600C1A2A4 /* apnea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apnea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7116D179200B4D5600C1A2A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				713C90492014D6EC00C3BF59 /* HistoryTrainingViewController.swift */,
 				4F2889482018897300AED101 /* datastore */,
 				4FE6C02F2018C100008A038A /* tableviewcell */,
+				4FD5B3DC201B5BB80082FA81 /* ColorSchema.swift */,
 			);
 			path = apnea;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7116D18E200EA42100C1A2A4 /* ApneaTestViewController.swift in Sources */,
+				4FD5B3DD201B5BB80082FA81 /* ColorSchema.swift in Sources */,
 				7116D17A200B4D5600C1A2A4 /* AppDelegate.swift in Sources */,
 				7152C4BD2014BE5000B558CD /* HistoryApneaTestViewController.swift in Sources */,
 				713C904A2014D6EC00C3BF59 /* HistoryTrainingViewController.swift in Sources */,

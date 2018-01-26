@@ -14,7 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window?.backgroundColor = ColorSchema.background
+        window?.tintColor = ColorSchema.tint
+
+        UIView.appearance().backgroundColor = ColorSchema.background
+        UIView.appearance().tintColor = ColorSchema.tint
+        UITableView.appearance().backgroundColor = ColorSchema.background
+        UITableView.appearance().tintColor = ColorSchema.tint
+        UITableViewCell.appearance().backgroundColor = ColorSchema.background
+        UITableViewCell.appearance().tintColor = ColorSchema.tint
         return true
     }
 

@@ -13,30 +13,25 @@ struct ApneaHistoryEntry: Codable {
     var date: Date
 }
 
-class ApneaHistoryDataStore: UserDefaults {
-    var encoder: JSONEncoder!
-    var decoder: JSONDecoder!
-
+class ApneaHistoryDataStore {
+    let encoder = JSONEncoder()
+    let decoder = JSONDecoder()
+    let userDefaults = UserDefaults.standard
+    
     private enum storeKeys: String {
         case historyApnea
     }
     
-    convenience init() {
-        self.init(suiteName: "history")!
-        self.encoder = JSONEncoder()
-        self.decoder = JSONDecoder()
-    }
-    
     func push(newInterval interval: TimeInterval, withDate date: Date) {
-        var history = self.get()
+        var history = get()
         history.append(ApneaHistoryEntry(interval: interval, date: date))
         let jsonData = try! self.encoder.encode(history)
-        self.set(jsonData, forKey: storeKeys.historyApnea.rawValue);
-        self.synchronize()
+        userDefaults.set(jsonData, forKey: storeKeys.historyApnea.rawValue);
+        userDefaults.synchronize()
     }
     
     func get() -> Array<ApneaHistoryEntry> {
-        if let jsonData = self.data(forKey: storeKeys.historyApnea.rawValue) {
+        if let jsonData = userDefaults.data(forKey: storeKeys.historyApnea.rawValue) {
             return try! self.decoder.decode([ApneaHistoryEntry].self, from: jsonData)
         }
         return []
