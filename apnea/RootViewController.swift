@@ -8,11 +8,18 @@
 
 import UIKit
 
+extension String {
+    func localized() -> String {
+        return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: "")
+    }
+}
+
+
 class RootViewModel {
     let rows = [
-        MenuItem(text: "Apnea Test", segueName: "ApneaTest"),
-        MenuItem(text: "History", segueName: "History"),
-        MenuItem(text: "Settings", segueName: "Settings")
+        MenuItem(text: "Apnea".localized(), segueName: "ApneaTest"),
+        MenuItem(text: "History".localized(), segueName: "History"),
+        MenuItem(text: "Settings".localized(), segueName: "Settings")
     ]
 }
 

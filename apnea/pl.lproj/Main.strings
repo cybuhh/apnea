@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "BhK-gU-TNc"; */
+"BhK-gU-TNc.text" = "Label";
+
+/* Class = "UIViewController"; title = "Apnea Test"; ObjectID = "JYk-Io-vu1"; */
+"JYk-Io-vu1.title" = "Apnea Test";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "c0K-M7-y5N"; */
+"c0K-M7-y5N.text" = "Label";
+
+/* Class = "UIViewController"; title = "Settings"; ObjectID = "d8K-bt-oMZ"; */
+"d8K-bt-oMZ.title" = "Settings";
+
+/* Class = "UIButton"; normalTitle = "Stop"; ObjectID = "fbE-Np-bhn"; */
+"fbE-Np-bhn.normalTitle" = "Stop";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "oOJ-4O-2yl"; */
+"oOJ-4O-2yl.normalTitle" = "Start";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "rKM-GS-eJQ"; */
+"rKM-GS-eJQ.normalTitle" = "Save";
+
+/* Class = "UIButton"; normalTitle = "Reset"; ObjectID = "xSp-fU-ShH"; */
+"xSp-fU-ShH.normalTitle" = "Reset";

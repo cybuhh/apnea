@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4F2889462018887C00AED101 /* ApneaHistoryDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2889452018887C00AED101 /* ApneaHistoryDataStore.swift */; };
+		4FD13148201F0FA800602873 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4FD1314A201F0FA800602873 /* Localizable.strings */; };
 		4FD5B3DD201B5BB80082FA81 /* ColorSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5B3DC201B5BB80082FA81 /* ColorSchema.swift */; };
 		4FE6C02E2018BFA8008A038A /* ApneaTestHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE6C02D2018BFA7008A038A /* ApneaTestHistoryTableViewCell.swift */; };
 		7116D17A200B4D5600C1A2A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116D179200B4D5600C1A2A4 /* AppDelegate.swift */; };
@@ -26,6 +27,9 @@
 
 /* Begin PBXFileReference section */
 		4F2889452018887C00AED101 /* ApneaHistoryDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApneaHistoryDataStore.swift; sourceTree = "<group>"; };
+		4FD13149201F0FA800602873 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4FD1314B201F0FC600602873 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4FD1314C201F10B400602873 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4FD5B3DC201B5BB80082FA81 /* ColorSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchema.swift; sourceTree = "<group>"; };
 		4FE6C02D2018BFA7008A038A /* ApneaTestHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApneaTestHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		7116D176200B4D5600C1A2A4 /* apnea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apnea.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +115,7 @@
 				4F2889482018897300AED101 /* datastore */,
 				4FE6C02F2018C100008A038A /* tableviewcell */,
 				4FD5B3DC201B5BB80082FA81 /* ColorSchema.swift */,
+				4FD1314A201F0FA800602873 /* Localizable.strings */,
 			);
 			path = apnea;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 			knownRegions = (
 				en,
 				Base,
+				pl,
 			);
 			mainGroup = 7116D16D200B4D5600C1A2A4;
 			productRefGroup = 7116D177200B4D5600C1A2A4 /* Products */;
@@ -194,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FD13148201F0FA800602873 /* Localizable.strings in Resources */,
 				7116D184200B4D5600C1A2A4 /* LaunchScreen.storyboard in Resources */,
 				7116D181200B4D5600C1A2A4 /* Assets.xcassets in Resources */,
 				7116D17F200B4D5600C1A2A4 /* Main.storyboard in Resources */,
@@ -278,6 +285,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		4FD1314A201F0FA800602873 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FD13149201F0FA800602873 /* en */,
+				4FD1314B201F0FC600602873 /* Base */,
+				4FD1314C201F10B400602873 /* pl */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		7116D17D200B4D5600C1A2A4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -301,6 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -358,6 +376,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
