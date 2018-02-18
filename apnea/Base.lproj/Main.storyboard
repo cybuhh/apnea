@@ -44,6 +44,21 @@
             </objects>
             <point key="canvasLocation" x="-556" y="-54"/>
         </scene>
+        <!--Apnea Training View Controller-->
+        <scene sceneID="Cxm-CQ-JAw">
+            <objects>
+                <viewController id="QPh-cQ-Ea3" customClass="ApneaTrainingViewController" customModule="apnea" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="weo-lc-1B5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="5Fm-xG-Fw3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RD1-hz-cc0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="642" y="15"/>
+        </scene>
         <!--Settings-->
         <scene sceneID="6TO-h6-UgE">
             <objects>
@@ -66,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ovo-2r-k39" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="654" y="-7"/>
+            <point key="canvasLocation" x="-1257" y="994"/>
         </scene>
         <!--History Trainingt View Controller-->
         <scene sceneID="Z3D-YP-RX9">
@@ -94,7 +109,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0yZ-4Y-8e3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1934" y="800"/>
+            <point key="canvasLocation" x="1617" y="994"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="1Yf-9Q-Jhe">
@@ -102,7 +117,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="EW8-e2-ytb" customClass="HistoryViewController" customModule="apnea" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uz5-x1-yA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="206" y="772"/>
+            <point key="canvasLocation" x="-122" y="996"/>
         </scene>
         <!--History Apnea Test View Controller-->
         <scene sceneID="mCj-bd-hFV">
@@ -120,14 +135,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhK-gU-TNc">
-                                            <rect key="frame" x="10" y="11" width="104" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhK-gU-TNc">
+                                            <rect key="frame" x="16" y="5" width="120" height="32"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0K-M7-y5N">
-                                            <rect key="frame" x="265" y="10" width="100" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0K-M7-y5N">
+                                            <rect key="frame" x="218" y="4" width="141" height="31"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -135,7 +150,9 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="c0K-M7-y5N" secondAttribute="trailing" constant="10" id="ASP-HV-VlT"/>
+                                        <constraint firstItem="c0K-M7-y5N" firstAttribute="centerY" secondItem="MeQ-zS-THi" secondAttribute="centerY" id="H5L-1u-w0i"/>
                                         <constraint firstItem="BhK-gU-TNc" firstAttribute="leading" secondItem="MeQ-zS-THi" secondAttribute="leading" constant="10" id="eec-H9-yCS"/>
+                                        <constraint firstItem="BhK-gU-TNc" firstAttribute="centerY" secondItem="MeQ-zS-THi" secondAttribute="centerY" id="pZh-KQ-5VV"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -152,7 +169,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iwf-Ua-3Ta" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1205.5" y="799.5"/>
+            <point key="canvasLocation" x="828" y="995"/>
         </scene>
         <!--Apnea Test-->
         <scene sceneID="MKh-69-RcJ">
@@ -225,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R1J-mY-sha" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653.60000000000002" y="-690.40479760119945"/>
+            <point key="canvasLocation" x="559" y="-812"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OHG-LB-OmP">

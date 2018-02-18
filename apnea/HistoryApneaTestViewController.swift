@@ -43,8 +43,10 @@ class HistoryApneaTestViewControllerDataSource: NSObject, UITableViewDataSource 
         let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryApneTestCell", for: indexPath) as! ApneaTestHistoryTableViewCell
         
         let menuItem = viewModel.rows[indexPath.row]
-        //cell.textLabel?.text = menuItem.text
-        cell.dateLabel.text = DateFormatter.localizedString(from: menuItem.date, dateStyle: DateFormatter.Style.short, timeStyle: DateFormatter.Style.none)
+        cell.dateLabel.text = DateFormatter.localizedString(
+            from: menuItem.date,
+            dateStyle: DateFormatter.Style.long,
+            timeStyle: DateFormatter.Style.none)
         
         cell.intervalLabel.text = self.dateFormater.string(from: menuItem.interval)
         return cell

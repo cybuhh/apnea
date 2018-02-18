@@ -17,7 +17,8 @@ extension String {
 
 class RootViewModel {
     let rows = [
-        MenuItem(text: "Apnea".localized(), segueName: "ApneaTest"),
+        MenuItem(text: "Apnea Test".localized(), segueName: "ApneaTest"),
+        MenuItem(text: "Apnea Training".localized(), segueName: "ApneaTraining"),
         MenuItem(text: "History".localized(), segueName: "History"),
         MenuItem(text: "Settings".localized(), segueName: "Settings")
     ]

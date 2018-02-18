@@ -22,6 +22,7 @@
 		7116D194200EA9E800C1A2A4 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116D193200EA9E800C1A2A4 /* MenuItem.swift */; };
 		713C904A2014D6EC00C3BF59 /* HistoryTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713C90492014D6EC00C3BF59 /* HistoryTrainingViewController.swift */; };
 		7152C4BD2014BE5000B558CD /* HistoryApneaTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7152C4BC2014BE5000B558CD /* HistoryApneaTestViewController.swift */; };
+		71B64C3A2039ECE20038B839 /* ApneaTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B64C392039ECE20038B839 /* ApneaTrainingViewController.swift */; };
 		BAEE7A4A98E58D0D987B0ABB /* Pods_apnea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7362CBC8B31546F76BEF5F6B /* Pods_apnea.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		7116D193200EA9E800C1A2A4 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		713C90492014D6EC00C3BF59 /* HistoryTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTrainingViewController.swift; sourceTree = "<group>"; };
 		7152C4BC2014BE5000B558CD /* HistoryApneaTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryApneaTestViewController.swift; sourceTree = "<group>"; };
+		71B64C392039ECE20038B839 /* ApneaTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApneaTrainingViewController.swift; sourceTree = "<group>"; };
 		7362CBC8B31546F76BEF5F6B /* Pods_apnea.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apnea.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B171803B0994323251FBBD91 /* Pods-apnea.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apnea.debug.xcconfig"; path = "Pods/Target Support Files/Pods-apnea/Pods-apnea.debug.xcconfig"; sourceTree = "<group>"; };
 		FD765F1244BE015183DEF2A5 /* Pods-apnea.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apnea.release.xcconfig"; path = "Pods/Target Support Files/Pods-apnea/Pods-apnea.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				4FE6C02F2018C100008A038A /* tableviewcell */,
 				4FD5B3DC201B5BB80082FA81 /* ColorSchema.swift */,
 				4FD1314A201F0FA800602873 /* Localizable.strings */,
+				71B64C392039ECE20038B839 /* ApneaTrainingViewController.swift */,
 			);
 			path = apnea;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71B64C3A2039ECE20038B839 /* ApneaTrainingViewController.swift in Sources */,
 				7116D18E200EA42100C1A2A4 /* ApneaTestViewController.swift in Sources */,
 				4FD5B3DD201B5BB80082FA81 /* ColorSchema.swift in Sources */,
 				7116D17A200B4D5600C1A2A4 /* AppDelegate.swift in Sources */,

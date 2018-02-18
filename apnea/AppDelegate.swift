@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        window?.backgroundColor = ColorSchema.background
+        /*window?.backgroundColor = ColorSchema.background
         window?.tintColor = ColorSchema.tint
 
         UIView.appearance().backgroundColor = ColorSchema.background
@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITableView.appearance().backgroundColor = ColorSchema.background
         UITableView.appearance().tintColor = ColorSchema.tint
         UITableViewCell.appearance().backgroundColor = ColorSchema.background
-        UITableViewCell.appearance().tintColor = ColorSchema.tint
+        UITableViewCell.appearance().tintColor = ColorSchema.tint*/
         return true
     }
 
