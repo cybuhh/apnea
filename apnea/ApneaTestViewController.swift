@@ -8,10 +8,13 @@
 
 import UIKit
 import MZTimerLabel
+import AVFoundation
+// import XCPlayground
 
 class ApneaTestViewController: UIViewController {
     var stopwatch: MZTimerLabel!
     var apenaHistoryDataStore: ApneaHistoryDataStore!
+    let dateFormater=DateComponentsFormatter()
 
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
@@ -33,6 +36,16 @@ class ApneaTestViewController: UIViewController {
         stopButton.isHidden = true
         saveButton.isHidden = false
         resetButton.isHidden = false
+        
+        // XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+        
+        let newInterval = stopwatch.getTimeCounted()
+        let utterance = AVSpeechUtterance(string: dateFormater.string(from: newInterval)!)
+        utterance.rate = 0.4
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.speak(utterance)
     }
     
     @IBAction func resetButtonClicked(_ sender: UIButton) {
@@ -51,6 +64,11 @@ class ApneaTestViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        dateFormater.unitsStyle = .full
+        dateFormater.allowedUnits = [.minute, .second]
+        dateFormater.zeroFormattingBehavior = [ .dropAll ]
+
         apenaHistoryDataStore = ApneaHistoryDataStore()
         stopwatch = MZTimerLabel(label: stoptimerLabel)
         startButton.isHidden = false
