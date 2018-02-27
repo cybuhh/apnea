@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		4F2889462018887C00AED101 /* ApneaHistoryDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2889452018887C00AED101 /* ApneaHistoryDataStore.swift */; };
+		4FBDA66420453BF600174C9C /* CO2TrainingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA66320453BF600174C9C /* CO2TrainingTableViewCell.swift */; };
+		4FBDA6662045572800174C9C /* ApneaHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA6652045572800174C9C /* ApneaHistoryViewModel.swift */; };
+		4FBDA6682045574F00174C9C /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA6672045574F00174C9C /* RootViewModel.swift */; };
+		4FBDA66B2045578C00174C9C /* RootViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA66A2045578C00174C9C /* RootViewControllerDataSource.swift */; };
+		4FBDA66E204557C700174C9C /* RootViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA66D204557C700174C9C /* RootViewControllerDelegate.swift */; };
+		4FBDA6702045589F00174C9C /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA66F2045589F00174C9C /* SettingsViewModel.swift */; };
+		4FBDA6722045592100174C9C /* HistoryApneaTestViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA6712045592100174C9C /* HistoryApneaTestViewControllerDataSource.swift */; };
+		4FBDA6742045596A00174C9C /* TrainingHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA6732045596A00174C9C /* TrainingHistoryViewModel.swift */; };
+		4FBDA67620455A9D00174C9C /* CO2TrainingTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA67520455A9D00174C9C /* CO2TrainingTableViewDataSource.swift */; };
+		4FBDA67820455ABD00174C9C /* CO2TrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA67720455ABD00174C9C /* CO2TrainingViewModel.swift */; };
 		4FD13148201F0FA800602873 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4FD1314A201F0FA800602873 /* Localizable.strings */; };
 		4FD5B3DD201B5BB80082FA81 /* ColorSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5B3DC201B5BB80082FA81 /* ColorSchema.swift */; };
 		4FE6C02E2018BFA8008A038A /* ApneaTestHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE6C02D2018BFA7008A038A /* ApneaTestHistoryTableViewCell.swift */; };
@@ -22,12 +32,22 @@
 		7116D194200EA9E800C1A2A4 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116D193200EA9E800C1A2A4 /* MenuItem.swift */; };
 		713C904A2014D6EC00C3BF59 /* HistoryTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713C90492014D6EC00C3BF59 /* HistoryTrainingViewController.swift */; };
 		7152C4BD2014BE5000B558CD /* HistoryApneaTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7152C4BC2014BE5000B558CD /* HistoryApneaTestViewController.swift */; };
-		71B64C3A2039ECE20038B839 /* ApneaTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B64C392039ECE20038B839 /* ApneaTrainingViewController.swift */; };
+		71B64C3A2039ECE20038B839 /* CO2TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B64C392039ECE20038B839 /* CO2TrainingViewController.swift */; };
 		BAEE7A4A98E58D0D987B0ABB /* Pods_apnea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7362CBC8B31546F76BEF5F6B /* Pods_apnea.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4F2889452018887C00AED101 /* ApneaHistoryDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApneaHistoryDataStore.swift; sourceTree = "<group>"; };
+		4FBDA66320453BF600174C9C /* CO2TrainingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CO2TrainingTableViewCell.swift; sourceTree = "<group>"; };
+		4FBDA6652045572800174C9C /* ApneaHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApneaHistoryViewModel.swift; sourceTree = "<group>"; };
+		4FBDA6672045574F00174C9C /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		4FBDA66A2045578C00174C9C /* RootViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerDataSource.swift; sourceTree = "<group>"; };
+		4FBDA66D204557C700174C9C /* RootViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerDelegate.swift; sourceTree = "<group>"; };
+		4FBDA66F2045589F00174C9C /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		4FBDA6712045592100174C9C /* HistoryApneaTestViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryApneaTestViewControllerDataSource.swift; sourceTree = "<group>"; };
+		4FBDA6732045596A00174C9C /* TrainingHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingHistoryViewModel.swift; sourceTree = "<group>"; };
+		4FBDA67520455A9D00174C9C /* CO2TrainingTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CO2TrainingTableViewDataSource.swift; sourceTree = "<group>"; };
+		4FBDA67720455ABD00174C9C /* CO2TrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CO2TrainingViewModel.swift; sourceTree = "<group>"; };
 		4FD13149201F0FA800602873 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4FD1314B201F0FC600602873 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4FD1314C201F10B400602873 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -46,7 +66,7 @@
 		7116D193200EA9E800C1A2A4 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		713C90492014D6EC00C3BF59 /* HistoryTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTrainingViewController.swift; sourceTree = "<group>"; };
 		7152C4BC2014BE5000B558CD /* HistoryApneaTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryApneaTestViewController.swift; sourceTree = "<group>"; };
-		71B64C392039ECE20038B839 /* ApneaTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApneaTrainingViewController.swift; sourceTree = "<group>"; };
+		71B64C392039ECE20038B839 /* CO2TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CO2TrainingViewController.swift; sourceTree = "<group>"; };
 		7362CBC8B31546F76BEF5F6B /* Pods_apnea.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apnea.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B171803B0994323251FBBD91 /* Pods-apnea.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apnea.debug.xcconfig"; path = "Pods/Target Support Files/Pods-apnea/Pods-apnea.debug.xcconfig"; sourceTree = "<group>"; };
 		FD765F1244BE015183DEF2A5 /* Pods-apnea.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apnea.release.xcconfig"; path = "Pods/Target Support Files/Pods-apnea/Pods-apnea.release.xcconfig"; sourceTree = "<group>"; };
@@ -64,21 +84,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4F2889482018897300AED101 /* datastore */ = {
+		4F2889482018897300AED101 /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
 				4F2889452018887C00AED101 /* ApneaHistoryDataStore.swift */,
 			);
-			name = datastore;
+			name = DataStore;
 			path = "New Group1";
 			sourceTree = "<group>";
 		};
-		4FE6C02F2018C100008A038A /* tableviewcell */ = {
+		4FBDA6692045576800174C9C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4FBDA6652045572800174C9C /* ApneaHistoryViewModel.swift */,
+				4FBDA6672045574F00174C9C /* RootViewModel.swift */,
+				4FBDA66F2045589F00174C9C /* SettingsViewModel.swift */,
+				4FBDA6732045596A00174C9C /* TrainingHistoryViewModel.swift */,
+				4FBDA67720455ABD00174C9C /* CO2TrainingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4FBDA66C204557A300174C9C /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				4FBDA66A2045578C00174C9C /* RootViewControllerDataSource.swift */,
+				4FBDA6712045592100174C9C /* HistoryApneaTestViewControllerDataSource.swift */,
+				4FBDA67520455A9D00174C9C /* CO2TrainingTableViewDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		4FBDA67920455C6E00174C9C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7116D18B200EA37D00C1A2A4 /* RootViewController.swift */,
+				7116D18D200EA42100C1A2A4 /* ApneaTestViewController.swift */,
+				7116D18F200EA45900C1A2A4 /* SettingsViewController.swift */,
+				7116D191200EA48B00C1A2A4 /* HistoryViewController.swift */,
+				7152C4BC2014BE5000B558CD /* HistoryApneaTestViewController.swift */,
+				713C90492014D6EC00C3BF59 /* HistoryTrainingViewController.swift */,
+				71B64C392039ECE20038B839 /* CO2TrainingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4FBDA67A20455E8100174C9C /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				4FBDA66D204557C700174C9C /* RootViewControllerDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		4FE6C02F2018C100008A038A /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				4FE6C02D2018BFA7008A038A /* ApneaTestHistoryTableViewCell.swift */,
+				4FBDA66320453BF600174C9C /* CO2TrainingTableViewCell.swift */,
 			);
-			path = tableviewcell;
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		7116D16D200B4D5600C1A2A4 = {
@@ -107,18 +172,15 @@
 				7116D180200B4D5600C1A2A4 /* Assets.xcassets */,
 				7116D182200B4D5600C1A2A4 /* LaunchScreen.storyboard */,
 				7116D185200B4D5600C1A2A4 /* Info.plist */,
-				7116D18B200EA37D00C1A2A4 /* RootViewController.swift */,
-				7116D18D200EA42100C1A2A4 /* ApneaTestViewController.swift */,
-				7116D18F200EA45900C1A2A4 /* SettingsViewController.swift */,
-				7116D191200EA48B00C1A2A4 /* HistoryViewController.swift */,
 				7116D193200EA9E800C1A2A4 /* MenuItem.swift */,
-				7152C4BC2014BE5000B558CD /* HistoryApneaTestViewController.swift */,
-				713C90492014D6EC00C3BF59 /* HistoryTrainingViewController.swift */,
-				4F2889482018897300AED101 /* datastore */,
-				4FE6C02F2018C100008A038A /* tableviewcell */,
+				4F2889482018897300AED101 /* DataStore */,
+				4FE6C02F2018C100008A038A /* TableViewCell */,
 				4FD5B3DC201B5BB80082FA81 /* ColorSchema.swift */,
 				4FD1314A201F0FA800602873 /* Localizable.strings */,
-				71B64C392039ECE20038B839 /* ApneaTrainingViewController.swift */,
+				4FBDA67920455C6E00174C9C /* ViewController */,
+				4FBDA6692045576800174C9C /* ViewModel */,
+				4FBDA66C204557A300174C9C /* DataSource */,
+				4FBDA67A20455E8100174C9C /* Delegate */,
 			);
 			path = apnea;
 			sourceTree = "<group>";
@@ -271,18 +333,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71B64C3A2039ECE20038B839 /* ApneaTrainingViewController.swift in Sources */,
+				4FBDA67820455ABD00174C9C /* CO2TrainingViewModel.swift in Sources */,
+				71B64C3A2039ECE20038B839 /* CO2TrainingViewController.swift in Sources */,
 				7116D18E200EA42100C1A2A4 /* ApneaTestViewController.swift in Sources */,
 				4FD5B3DD201B5BB80082FA81 /* ColorSchema.swift in Sources */,
+				4FBDA6662045572800174C9C /* ApneaHistoryViewModel.swift in Sources */,
 				7116D17A200B4D5600C1A2A4 /* AppDelegate.swift in Sources */,
 				7152C4BD2014BE5000B558CD /* HistoryApneaTestViewController.swift in Sources */,
 				713C904A2014D6EC00C3BF59 /* HistoryTrainingViewController.swift in Sources */,
+				4FBDA66B2045578C00174C9C /* RootViewControllerDataSource.swift in Sources */,
+				4FBDA67620455A9D00174C9C /* CO2TrainingTableViewDataSource.swift in Sources */,
 				4FE6C02E2018BFA8008A038A /* ApneaTestHistoryTableViewCell.swift in Sources */,
+				4FBDA66420453BF600174C9C /* CO2TrainingTableViewCell.swift in Sources */,
 				7116D18C200EA37D00C1A2A4 /* RootViewController.swift in Sources */,
+				4FBDA6682045574F00174C9C /* RootViewModel.swift in Sources */,
+				4FBDA66E204557C700174C9C /* RootViewControllerDelegate.swift in Sources */,
 				7116D194200EA9E800C1A2A4 /* MenuItem.swift in Sources */,
+				4FBDA6722045592100174C9C /* HistoryApneaTestViewControllerDataSource.swift in Sources */,
+				4FBDA6742045596A00174C9C /* TrainingHistoryViewModel.swift in Sources */,
 				4F2889462018887C00AED101 /* ApneaHistoryDataStore.swift in Sources */,
 				7116D192200EA48B00C1A2A4 /* HistoryViewController.swift in Sources */,
 				7116D190200EA45900C1A2A4 /* SettingsViewController.swift in Sources */,
+				4FBDA6702045589F00174C9C /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

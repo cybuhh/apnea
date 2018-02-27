@@ -12,47 +12,6 @@ import UIKit
     let text: String
 }*/
 
-class ApneaHistoryViewModel {
-    var rows: [ApneaHistoryEntry]
-    
-    init() {
-        let apneaHistoryDataStore = ApneaHistoryDataStore()
-        rows = apneaHistoryDataStore.get().map {
-            ApneaHistoryEntry(interval: $0.interval, date: $0.date)
-        }
-    }
-}
-
-class HistoryApneaTestViewControllerDataSource: NSObject, UITableViewDataSource {
-    let viewModel: ApneaHistoryViewModel
-    let dateFormater: DateComponentsFormatter
-    
-    init(viewModel: ApneaHistoryViewModel) {
-        self.viewModel = viewModel
-        self.dateFormater = DateComponentsFormatter()
-        dateFormater.unitsStyle = .abbreviated
-        dateFormater.allowedUnits = [.minute, .second]
-        dateFormater.zeroFormattingBehavior = [ .dropAll ]
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.rows.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryApneTestCell", for: indexPath) as! ApneaTestHistoryTableViewCell
-        
-        let menuItem = viewModel.rows[indexPath.row]
-        cell.dateLabel.text = DateFormatter.localizedString(
-            from: menuItem.date,
-            dateStyle: DateFormatter.Style.long,
-            timeStyle: DateFormatter.Style.none)
-        
-        cell.intervalLabel.text = self.dateFormater.string(from: menuItem.interval)
-        return cell
-    }
-}
-
 class HistoryApneaTestViewControllerDelegate: NSObject, UITableViewDelegate {
     let viewModel: ApneaHistoryViewModel
     let didSelectCallback: (String) -> ()

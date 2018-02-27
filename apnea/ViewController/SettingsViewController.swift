@@ -8,17 +8,6 @@
 
 import UIKit
 
-struct SettingsSectionItem {
-    let text: String
-    let rows: [MenuItem]
-}
-
-struct SettingsViewModel {
-    let rows = [SettingsSectionItem(text: "Current Max Breath Hold", rows: [
-        MenuItem(text: "Time", segueName: "test")
-        ])]
-}
-
 class SettingsViewController: UITableViewController {
     let viewModel = SettingsViewModel()
     

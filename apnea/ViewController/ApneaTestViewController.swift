@@ -9,7 +9,6 @@
 import UIKit
 import MZTimerLabel
 import AVFoundation
-// import XCPlayground
 
 class ApneaTestViewController: UIViewController {
     var stopwatch: MZTimerLabel!
@@ -36,8 +35,6 @@ class ApneaTestViewController: UIViewController {
         stopButton.isHidden = true
         saveButton.isHidden = false
         resetButton.isHidden = false
-        
-        // XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
         
         let newInterval = stopwatch.getTimeCounted()
         let utterance = AVSpeechUtterance(string: dateFormater.string(from: newInterval)!)

@@ -8,15 +8,7 @@
 
 import UIKit
 
-struct TrainingHistoryCell {
-    let text: String
-}
-
-class TrainingHistoryViewModel {
-    let rows = [TrainingHistoryCell(text: "test TrainingHistoryViewModel")]
-}
-
-class HistoryTrainingtViewController: UITableViewController {
+class HistoryTrainingViewController: UITableViewController {
     let viewModel = TrainingHistoryViewModel()
     
     override func viewDidLoad() {
