@@ -96,8 +96,8 @@
 		4FBDA6692045576800174C9C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				4FBDA6652045572800174C9C /* ApneaHistoryViewModel.swift */,
 				4FBDA6672045574F00174C9C /* RootViewModel.swift */,
+				4FBDA6652045572800174C9C /* ApneaHistoryViewModel.swift */,
 				4FBDA66F2045589F00174C9C /* SettingsViewModel.swift */,
 				4FBDA6732045596A00174C9C /* TrainingHistoryViewModel.swift */,
 				4FBDA67720455ABD00174C9C /* CO2TrainingViewModel.swift */,

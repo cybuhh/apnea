@@ -33,9 +33,9 @@ class CO2TrainingTableViewDataSource: NSObject, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CO2TrainingCell", for: indexPath) as! CO2TrainingTableViewCell
         
         let tableItem = viewModel.rows[indexPath.row]
-        cell.countLabel?.text = "\(indexPath.row + 1)"
+        cell.countLabel?.text = "\(tableItem.round)"
         cell.actionLabel?.text = indexPath.row%2 == 0 ? CO2TrainingActionTypes.Respiration.rawValue : CO2TrainingActionTypes.Apnea.rawValue
-        cell.timeLabel?.text = dateFormater.string(from: tableItem.time)
+        cell.timeLabel?.text = dateFormater.string(from: tableItem.interval)
         
         return cell
     }

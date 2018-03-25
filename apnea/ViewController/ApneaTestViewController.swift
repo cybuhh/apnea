@@ -67,7 +67,10 @@ class ApneaTestViewController: UIViewController {
         dateFormater.zeroFormattingBehavior = [ .dropAll ]
 
         apenaHistoryDataStore = ApneaHistoryDataStore()
+
         stopwatch = MZTimerLabel(label: stoptimerLabel)
+        stopwatch.timeFormat = "mm:ss"
+
         startButton.isHidden = false
         stopButton.isHidden = true
         saveButton.isHidden = true
