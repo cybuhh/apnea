@@ -32,6 +32,7 @@ class CO2TrainingViewController: UIViewController, MZTimerLabelDelegate {
         resetButton.isHidden = true
         setActiveRound()
         stopwatch.start()
+        UIApplication.shared.isIdleTimerDisabled = true
     }
     @IBAction func stopButtonClicked(_ sender: UIButton) {
         startButton.isHidden = true
@@ -39,6 +40,7 @@ class CO2TrainingViewController: UIViewController, MZTimerLabelDelegate {
         nextButton.isHidden = true
         resetButton.isHidden = false
         stopwatch.pause()
+        UIApplication.shared.isIdleTimerDisabled = false
     }
     @IBAction func nextButtonClicked(_ sender: UIButton) {
         stopwatch.pause()
@@ -94,6 +96,10 @@ class CO2TrainingViewController: UIViewController, MZTimerLabelDelegate {
         dateFormater.zeroFormattingBehavior = [ .dropAll ]
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        UIApplication.shared.isIdleTimerDisabled = false
+    }
+    
     func timerLabel(_ timerLabel: MZTimerLabel, finshedCountDownTimerWithTime countTime: TimeInterval){
         stopwatch.pause()
         print("finshedCountDownTimerWithTime")
@@ -114,8 +120,8 @@ class CO2TrainingViewController: UIViewController, MZTimerLabelDelegate {
             spokenTime = currentTime
             if (spokenTime % 60 == 0 ||
                 spokenTime < 120 && spokenTime % 30 == 0 ||
-                spokenTime < 30 && spokenTime % 10 == 0 ||
-                spokenTime < 60 && spokenTime % 15 == 0) {
+                (spokenTime < 60 && spokenTime > 30) && spokenTime % 15 == 0 ||
+                spokenTime < 30 && spokenTime % 10 == 0) {
                 let utterance = AVSpeechUtterance(string: dateFormater.string(from: time)!)
                 utterance.rate = 0.4
                 utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
@@ -127,4 +133,5 @@ class CO2TrainingViewController: UIViewController, MZTimerLabelDelegate {
             }
         }
     }
+    
 }
