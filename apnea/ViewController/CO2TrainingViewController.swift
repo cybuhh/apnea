@@ -96,7 +96,7 @@ class CO2TrainingViewController: UIViewController, MZTimerLabelDelegate {
         dateFormater.zeroFormattingBehavior = [ .dropAll ]
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func viewWillDisappear(_ animated: Bool) {
         UIApplication.shared.isIdleTimerDisabled = false
     }
     
