@@ -315,31 +315,28 @@
                                         <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
                                         <state key="normal" title="Start"/>
                                         <connections>
-                                            <action selector="startButtonClicked:" destination="RRX-KO-SgB" eventType="touchUpInside" id="pif-TE-FVX"/>
+                                            <action selector="startButtonClicked:" destination="JYk-Io-vu1" eventType="touchUpInside" id="Nts-V5-O7a"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbE-Np-bhn">
                                         <rect key="frame" x="52" y="0.0" width="32" height="30"/>
                                         <state key="normal" title="Stop"/>
                                         <connections>
-                                            <action selector="stopButtonClicked:" destination="JYk-Io-vu1" eventType="touchUpInside" id="Zlm-Wh-pkK"/>
-                                            <action selector="stopButtonClicked:" destination="RRX-KO-SgB" eventType="touchUpInside" id="faa-Mw-Iud"/>
+                                            <action selector="stopButtonClicked:" destination="JYk-Io-vu1" eventType="touchUpInside" id="beB-du-gxj"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKM-GS-eJQ">
                                         <rect key="frame" x="102" y="0.0" width="34" height="30"/>
                                         <state key="normal" title="Save"/>
                                         <connections>
-                                            <action selector="saveButtonClicked:" destination="JYk-Io-vu1" eventType="touchUpInside" id="Jgo-5J-sNC"/>
-                                            <action selector="saveButtonClicked:" destination="RRX-KO-SgB" eventType="touchUpInside" id="uW0-kP-1Fx"/>
+                                            <action selector="saveButtonClicked:" destination="JYk-Io-vu1" eventType="touchUpInside" id="waP-dT-HfZ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSp-fU-ShH">
                                         <rect key="frame" x="154" y="0.0" width="39" height="30"/>
                                         <state key="normal" title="Reset"/>
                                         <connections>
-                                            <action selector="resetButtonClicked:" destination="RRX-KO-SgB" eventType="touchUpInside" id="0lu-YI-cDl"/>
-                                            <action selector="resetButtonClicked:" destination="JYk-Io-vu1" eventType="touchUpInside" id="557-2b-8DG"/>
+                                            <action selector="resetButtonClicked:" destination="JYk-Io-vu1" eventType="touchUpInside" id="Uqz-YQ-jtq"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -357,14 +354,14 @@
                         <viewLayoutGuide key="safeArea" id="l3h-Qx-hr8"/>
                     </view>
                     <connections>
-                        <outlet property="resetButton" destination="xSp-fU-ShH" id="rc6-Vf-Q2W"/>
-                        <outlet property="startButton" destination="oOJ-4O-2yl" id="hg1-gi-wXA"/>
-                        <outlet property="stopButton" destination="fbE-Np-bhn" id="g4b-4b-Wgf"/>
+                        <outlet property="resetButton" destination="xSp-fU-ShH" id="rhP-cI-2CC"/>
+                        <outlet property="saveButton" destination="rKM-GS-eJQ" id="Ywv-mp-P7b"/>
+                        <outlet property="startButton" destination="oOJ-4O-2yl" id="Abj-Xx-NR9"/>
+                        <outlet property="stopButton" destination="fbE-Np-bhn" id="ixA-ip-deb"/>
                         <outlet property="stoptimerLabel" destination="JLs-zv-ieA" id="04t-30-GSk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R1J-mY-sha" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="RRX-KO-SgB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="206" y="-704"/>
         </scene>

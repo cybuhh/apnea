@@ -10,7 +10,8 @@ import UIKit
 import MZTimerLabel
 import AVFoundation
 
-class ApneaTestViewController: UIViewController {
+class ApneaTestViewController: UIViewController, MZTimerLabelDelegate {
+    var spokenTime = 0
     var stopwatch: MZTimerLabel!
     var apenaHistoryDataStore: ApneaHistoryDataStore!
     let dateFormater=DateComponentsFormatter()
@@ -70,11 +71,33 @@ class ApneaTestViewController: UIViewController {
 
         stopwatch = MZTimerLabel(label: stoptimerLabel)
         stopwatch.timeFormat = "mm:ss"
+        stopwatch.delegate = self
 
         startButton.isHidden = false
         stopButton.isHidden = true
         saveButton.isHidden = true
         resetButton.isHidden = true
+    }
+    
+    func timerLabel(_ timerLabel: MZTimerLabel, countingTo time: TimeInterval, timertype: MZTimerLabelType) {
+        let currentTime = Int(time)
+        if (spokenTime != currentTime) {
+            spokenTime = currentTime
+            if (spokenTime % 60 == 0 ||
+                spokenTime > 120 && spokenTime % 30 == 0 ||
+                (spokenTime > 180 && spokenTime < 360) && spokenTime % 15 == 0 ||
+                spokenTime > 360 && spokenTime % 10 == 0) {
+
+                let utterance = AVSpeechUtterance(string: dateFormater.string(from: time)!)
+                utterance.rate = 0.4
+                utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                
+                let synthesizer = AVSpeechSynthesizer()
+                synthesizer.speak(utterance)
+                
+                print("\(currentTime)")
+            }
+        }
     }
 }
 

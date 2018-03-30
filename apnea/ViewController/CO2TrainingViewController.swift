@@ -133,5 +133,4 @@ class CO2TrainingViewController: UIViewController, MZTimerLabelDelegate {
             }
         }
     }
-    
 }
