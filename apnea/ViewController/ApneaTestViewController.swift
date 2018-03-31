@@ -80,22 +80,24 @@ class ApneaTestViewController: UIViewController, MZTimerLabelDelegate {
     }
     
     func timerLabel(_ timerLabel: MZTimerLabel, countingTo time: TimeInterval, timertype: MZTimerLabelType) {
-        let currentTime = Int(time)
-        if (spokenTime != currentTime) {
-            spokenTime = currentTime
-            if (spokenTime % 60 == 0 ||
-                spokenTime > 120 && spokenTime % 30 == 0 ||
-                (spokenTime > 180 && spokenTime < 360) && spokenTime % 15 == 0 ||
-                spokenTime > 360 && spokenTime % 10 == 0) {
-
-                let utterance = AVSpeechUtterance(string: dateFormater.string(from: time)!)
-                utterance.rate = 0.4
-                utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-                
-                let synthesizer = AVSpeechSynthesizer()
-                synthesizer.speak(utterance)
-                
-                print("\(currentTime)")
+        if !(time.isNaN || time.isInfinite) {
+            let currentTime = Int(time)
+            if (spokenTime != currentTime) {
+                spokenTime = currentTime
+                if (spokenTime > 0 && spokenTime % 60 == 0 ||
+                    spokenTime > 120 && spokenTime % 30 == 0 ||
+                    (spokenTime > 180 && spokenTime < 240) && spokenTime % 15 == 0 ||
+                    spokenTime > 240 && spokenTime % 10 == 0) {
+                    
+                    let utterance = AVSpeechUtterance(string: dateFormater.string(from: time)!)
+                    utterance.rate = 0.4
+                    utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                    
+                    let synthesizer = AVSpeechSynthesizer()
+                    synthesizer.speak(utterance)
+                    
+                    print("\(currentTime)")
+                }
             }
         }
     }

@@ -31,7 +31,7 @@ class RootViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let controller = segue.destination as? ApneaTestViewController {
-            controller.title = "fo"
+            controller.title = "Apnea Test"
         }
     }
 
