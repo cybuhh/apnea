@@ -16,6 +16,8 @@ class CO2TrainingViewController: UIViewController, MZTimerLabelDelegate {
     var co2TrainingTableViewDataSource: CO2TrainingTableViewDataSource?
     var stopwatch: MZTimerLabel!
     let dateFormater=DateComponentsFormatter()
+    var co2TrainingHistoryDataStore: HistoryCO2TrainingDataStore!
+    let trainingType = HistoryCO2TrainingType.co2
 
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -55,7 +57,8 @@ class CO2TrainingViewController: UIViewController, MZTimerLabelDelegate {
         setActiveRound(atRow: 0)
     }
     
-    let viewModel = CO2TrainingViewModel(rounds: 8, forApneaTime: 130, startingFromRespirationTime: 120, withRespirationDecreaseTime: 15)
+    // let viewModel = CO2TrainingViewModel(rounds: 8, forApneaTime: 130, startingFromRespirationTime: 120, withRespirationDecreaseTime: 15)
+    let viewModel = CO2TrainingViewModel(rounds: 1, forApneaTime: 3, startingFromRespirationTime: 2, withRespirationDecreaseTime: 15)
  
     func setActiveRound(atRow row: Int? = nil) {
         if row != nil {
@@ -78,6 +81,8 @@ class CO2TrainingViewController: UIViewController, MZTimerLabelDelegate {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        co2TrainingHistoryDataStore = HistoryCO2TrainingDataStore()
         
         stopwatch = MZTimerLabel(label: timerLabel, andTimerType: MZTimerLabelTypeTimer)
         stopwatch.timeFormat = "mm:ss"
@@ -107,6 +112,8 @@ class CO2TrainingViewController: UIViewController, MZTimerLabelDelegate {
             setActiveRound(atRow: activeRow + 1)
             stopwatch.start()
         } else {
+            co2TrainingHistoryDataStore.push(traningType: trainingType, withDate: Date())
+            print("rows: \(co2TrainingHistoryDataStore.get().count)")
             startButton.isHidden = true
             stopButton.isHidden = true
             nextButton.isHidden = true

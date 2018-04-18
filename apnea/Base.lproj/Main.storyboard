@@ -207,22 +207,46 @@
             </objects>
             <point key="canvasLocation" x="-998" y="711"/>
         </scene>
-        <!--History Training View Controller-->
+        <!--History CO2 Training View Controller-->
         <scene sceneID="Z3D-YP-RX9">
             <objects>
-                <tableViewController storyboardIdentifier="HistoryTrainingVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9oV-V9-Enl" customClass="HistoryTrainingViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="HistoryCO2TrainingVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9oV-V9-Enl" userLabel="History CO2 Training View Controller" customClass="HistoryCO2TrainingViewController" customModule="apnea" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gcg-mW-fzV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryTrainingTestCell" id="dbP-eG-hCk">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryCO2TrainingCell" id="dbP-eG-hCk" customClass="HistoryCO2TrainingTableViewCell" customModule="apnea" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dbP-eG-hCk" id="hNZ-RD-Y03">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Training type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAY-4H-N0r" userLabel="Training type Label">
+                                            <rect key="frame" x="22" y="12" width="128" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIt-KK-RX7" userLabel="Date Label">
+                                            <rect key="frame" x="324" y="11" width="36" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="CAY-4H-N0r" firstAttribute="centerY" secondItem="hNZ-RD-Y03" secondAttribute="centerY" id="L8K-By-UZa"/>
+                                        <constraint firstItem="xIt-KK-RX7" firstAttribute="centerY" secondItem="hNZ-RD-Y03" secondAttribute="centerY" id="jda-K6-l5S"/>
+                                        <constraint firstItem="CAY-4H-N0r" firstAttribute="leading" secondItem="hNZ-RD-Y03" secondAttribute="leading" constant="15" id="tdK-f5-5JM"/>
+                                        <constraint firstAttribute="trailing" secondItem="xIt-KK-RX7" secondAttribute="trailing" constant="15" id="v8T-Ss-MP5"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="xIt-KK-RX7" id="2r8-6z-MLc"/>
+                                    <outlet property="typeLabel" destination="CAY-4H-N0r" id="vWx-zx-MtE"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -233,7 +257,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0yZ-4Y-8e3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1617" y="994"/>
+            <point key="canvasLocation" x="1616.8" y="993.55322338830592"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="1Yf-9Q-Jhe">
@@ -252,32 +276,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryApneTestCell" id="BFs-bB-UaX" customClass="ApneaTestHistoryTableViewCell" customModule="apnea" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryApneTestCell" id="BFs-bB-UaX" customClass="HistoryApneaTestTableViewCell" customModule="apnea" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BFs-bB-UaX" id="MeQ-zS-THi">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Interval" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhK-gU-TNc">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Interval" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhK-gU-TNc">
                                             <rect key="frame" x="16" y="5" width="120" height="32"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0K-M7-y5N">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0K-M7-y5N">
                                             <rect key="frame" x="218" y="4" width="141" height="31"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="BhK-gU-TNc" firstAttribute="centerY" secondItem="MeQ-zS-THi" secondAttribute="centerY" id="DEs-uG-ylk"/>
+                                        <constraint firstAttribute="trailing" secondItem="c0K-M7-y5N" secondAttribute="trailing" constant="15" id="WJA-ob-cRa"/>
+                                        <constraint firstItem="BhK-gU-TNc" firstAttribute="leading" secondItem="MeQ-zS-THi" secondAttribute="leading" constant="15" id="eO6-A2-6gb"/>
+                                        <constraint firstItem="c0K-M7-y5N" firstAttribute="centerY" secondItem="MeQ-zS-THi" secondAttribute="centerY" id="msU-nn-fdB"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="dateLabel" destination="c0K-M7-y5N" id="jbP-K9-kam"/>
-                                    <outlet property="intervalLabel" destination="BhK-gU-TNc" id="Fbe-Jm-v5M"/>
+                                    <outlet property="dateLabel" destination="c0K-M7-y5N" id="eBU-KW-7gK"/>
+                                    <outlet property="intervalLabel" destination="BhK-gU-TNc" id="Gs8-Oz-maQ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

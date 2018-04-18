@@ -8,12 +8,7 @@
 
 import Foundation
 
-struct ApneaHistoryEntry: Codable {
-    var interval: TimeInterval
-    var date: Date
-}
-
-class ApneaHistoryDataStore {
+class HistoryApneaTestDataStore {
     let encoder = JSONEncoder()
     let decoder = JSONDecoder()
     let userDefaults = UserDefaults.standard
@@ -24,15 +19,15 @@ class ApneaHistoryDataStore {
     
     func push(newInterval interval: TimeInterval, withDate date: Date) {
         var history = get()
-        history.append(ApneaHistoryEntry(interval: interval, date: date))
+        history.append(HistoryApneaTestEntry(interval: interval, date: date))
         let jsonData = try! self.encoder.encode(history)
         userDefaults.set(jsonData, forKey: storeKeys.historyApnea.rawValue);
         userDefaults.synchronize()
     }
     
-    func get() -> Array<ApneaHistoryEntry> {
+    func get() -> Array<HistoryApneaTestEntry> {
         if let jsonData = userDefaults.data(forKey: storeKeys.historyApnea.rawValue) {
-            return try! self.decoder.decode([ApneaHistoryEntry].self, from: jsonData)
+            return try! self.decoder.decode([HistoryApneaTestEntry].self, from: jsonData)
         }
         return []
     }

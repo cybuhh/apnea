@@ -9,7 +9,7 @@
 import UIKit
 
 class HistoryViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
-    let listControllers = ["HistoryApneaTest", "HistoryTraining"]
+    let listControllers = ["HistoryApneaTest", "HistoryCO2Training"]
     
     private(set) lazy var listViewControllers: [UIViewController] = {
         return listControllers.map {

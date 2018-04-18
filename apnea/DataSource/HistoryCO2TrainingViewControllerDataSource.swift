@@ -1,19 +1,19 @@
 //
-//  HistoryApneaTestViewControllerDataSource.swift
+//  HistoryCO2TrainingViewControllerDataSource.swift
 //  apnea
 //
-//  Created by matcybur on 27/02/2018.
+//  Created by cybuhh on 01/04/2018.
 //  Copyright © 2018 cybuhh. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class HistoryApneaTestViewControllerDataSource: NSObject, UITableViewDataSource {
-    let viewModel: HistoryApneaTestViewModel
+class HistoryCO2TrainingViewControllerDataSource: NSObject, UITableViewDataSource {
+    let viewModel: HistoryCO2TrainingViewModel
     let dateFormater = DateComponentsFormatter()
     
-    init(viewModel: HistoryApneaTestViewModel) {
+    init(viewModel: HistoryCO2TrainingViewModel) {
         self.viewModel = viewModel
         dateFormater.unitsStyle = .abbreviated
         dateFormater.allowedUnits = [.minute, .second]
@@ -25,7 +25,7 @@ class HistoryApneaTestViewControllerDataSource: NSObject, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryApneTestCell", for: indexPath) as! HistoryApneaTestTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCO2TrainingCell", for: indexPath) as! HistoryCO2TrainingTableViewCell
         
         let menuItem = viewModel.rows[indexPath.row]
         cell.dateLabel.text = DateFormatter.localizedString(
@@ -33,7 +33,7 @@ class HistoryApneaTestViewControllerDataSource: NSObject, UITableViewDataSource 
             dateStyle: DateFormatter.Style.long,
             timeStyle: DateFormatter.Style.none)
         
-        cell.intervalLabel.text = self.dateFormater.string(from: menuItem.interval)
+        cell.typeLabel.text = menuItem.type.rawValue
         return cell
     }
 }

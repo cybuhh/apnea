@@ -13,7 +13,7 @@ import AVFoundation
 class ApneaTestViewController: UIViewController, MZTimerLabelDelegate {
     var spokenTime = 0
     var stopwatch: MZTimerLabel!
-    var apenaHistoryDataStore: ApneaHistoryDataStore!
+    var apenaHistoryDataStore: HistoryApneaTestDataStore!
     let dateFormater=DateComponentsFormatter()
 
     @IBOutlet weak var startButton: UIButton!
@@ -29,6 +29,7 @@ class ApneaTestViewController: UIViewController, MZTimerLabelDelegate {
         stopButton.isHidden = false
         saveButton.isHidden = true
         resetButton.isHidden = true
+        UIApplication.shared.isIdleTimerDisabled = true
     }
     @IBAction func stopButtonClicked(_ sender: UIButton) {
         stopwatch.pause()
@@ -36,7 +37,8 @@ class ApneaTestViewController: UIViewController, MZTimerLabelDelegate {
         stopButton.isHidden = true
         saveButton.isHidden = false
         resetButton.isHidden = false
-        
+        UIApplication.shared.isIdleTimerDisabled = false
+
         let newInterval = stopwatch.getTimeCounted()
         let utterance = AVSpeechUtterance(string: dateFormater.string(from: newInterval)!)
         utterance.rate = 0.4
@@ -67,7 +69,7 @@ class ApneaTestViewController: UIViewController, MZTimerLabelDelegate {
         dateFormater.allowedUnits = [.minute, .second]
         dateFormater.zeroFormattingBehavior = [ .dropAll ]
 
-        apenaHistoryDataStore = ApneaHistoryDataStore()
+        apenaHistoryDataStore = HistoryApneaTestDataStore()
 
         stopwatch = MZTimerLabel(label: stoptimerLabel)
         stopwatch.timeFormat = "mm:ss"
@@ -77,6 +79,10 @@ class ApneaTestViewController: UIViewController, MZTimerLabelDelegate {
         stopButton.isHidden = true
         saveButton.isHidden = true
         resetButton.isHidden = true
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        UIApplication.shared.isIdleTimerDisabled = false
     }
     
     func timerLabel(_ timerLabel: MZTimerLabel, countingTo time: TimeInterval, timertype: MZTimerLabelType) {
