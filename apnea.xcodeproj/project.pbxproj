@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F3BC664208F0CBD00A0B363 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3BC663208F0CBD00A0B363 /* SettingsTableViewCell.swift */; };
 		4FBDA66420453BF600174C9C /* CO2TrainingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA66320453BF600174C9C /* CO2TrainingTableViewCell.swift */; };
 		4FBDA6662045572800174C9C /* HistoryApneaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA6652045572800174C9C /* HistoryApneaViewModel.swift */; };
 		4FBDA6682045574F00174C9C /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA6672045574F00174C9C /* RootViewModel.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F3BC663208F0CBD00A0B363 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		4FBDA66320453BF600174C9C /* CO2TrainingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CO2TrainingTableViewCell.swift; sourceTree = "<group>"; };
 		4FBDA6652045572800174C9C /* HistoryApneaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryApneaViewModel.swift; sourceTree = "<group>"; };
 		4FBDA6672045574F00174C9C /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				4FE6C02D2018BFA7008A038A /* HistoryApneaTestTableViewCell.swift */,
 				4FBDA66320453BF600174C9C /* CO2TrainingTableViewCell.swift */,
 				7181C05A20712A32007160CC /* HistoryCO2TrainingTableViewCell.swift */,
+				4F3BC663208F0CBD00A0B363 /* SettingsTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -246,7 +249,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = cybuhh;
 				TargetAttributes = {
 					7116D175200B4D5600C1A2A4 = {
@@ -365,6 +368,7 @@
 				714DA089206FB737002F05FB /* HistoryApneaTestDataStore.swift in Sources */,
 				7116D18C200EA37D00C1A2A4 /* RootViewController.swift in Sources */,
 				4FBDA6682045574F00174C9C /* RootViewModel.swift in Sources */,
+				4F3BC664208F0CBD00A0B363 /* SettingsTableViewCell.swift in Sources */,
 				4FBDA66E204557C700174C9C /* RootViewControllerDelegate.swift in Sources */,
 				7116D194200EA9E800C1A2A4 /* MenuItem.swift in Sources */,
 				4FBDA6722045592100174C9C /* HistoryApneaTestViewControllerDataSource.swift in Sources */,
@@ -424,6 +428,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -431,6 +436,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -483,6 +489,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -490,6 +497,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

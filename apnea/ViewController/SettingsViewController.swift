@@ -24,11 +24,12 @@ class SettingsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsMenuCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsMenuCell", for: indexPath) as! SettingsTableViewCell
         
         let menuItem = viewModel.rows[indexPath.section].rows[indexPath.row]
-        cell.textLabel?.text = menuItem.text
-        
+        cell.typeLabel?.text = menuItem.text
+        cell.valueLabel?.text = String(menuItem.value)
+
         return cell
     }
     
