@@ -194,25 +194,30 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="iCk-8l-npg">
+                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="9999" translatesAutoresizingMaskIntoConstraints="NO" id="iCk-8l-npg">
                                             <rect key="frame" x="271" y="7.5" width="94" height="29"/>
+                                            <connections>
+                                                <action selector="stepperValueChanged:forEvent:" destination="yBJ-7L-dM4" eventType="valueChanged" id="Xrl-GO-feg"/>
+                                            </connections>
                                         </stepper>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1Q-GK-yiJ">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1Q-GK-yiJ" customClass="UITimeLabel" customModule="apnea" customModuleProvider="target">
                                             <rect key="frame" x="220" y="11" width="41" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obn-HT-jWr">
-                                            <rect key="frame" x="20" y="11" width="92" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obn-HT-jWr">
+                                            <rect key="frame" x="10" y="11" width="34" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="obn-HT-jWr" secondAttribute="trailing" constant="20" symbolic="YES" id="DNm-Cf-USW"/>
                                         <constraint firstAttribute="trailing" secondItem="iCk-8l-npg" secondAttribute="trailing" constant="10" id="Hkl-Du-O2r"/>
                                         <constraint firstItem="iCk-8l-npg" firstAttribute="centerY" secondItem="i7N-Iy-TJB" secondAttribute="centerY" id="L6v-ta-9EF"/>
+                                        <constraint firstItem="Y1Q-GK-yiJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i7N-Iy-TJB" secondAttribute="leading" constant="20" symbolic="YES" id="Qyf-69-6GA"/>
                                         <constraint firstItem="Y1Q-GK-yiJ" firstAttribute="centerY" secondItem="i7N-Iy-TJB" secondAttribute="centerY" id="U4L-1u-1Sy"/>
                                         <constraint firstItem="obn-HT-jWr" firstAttribute="centerY" secondItem="i7N-Iy-TJB" secondAttribute="centerY" id="Yfo-q4-FaA"/>
                                         <constraint firstItem="obn-HT-jWr" firstAttribute="leading" secondItem="i7N-Iy-TJB" secondAttribute="leading" constant="10" id="hvl-xi-zuO"/>
@@ -222,6 +227,7 @@
                                 <connections>
                                     <outlet property="typeLabel" destination="obn-HT-jWr" id="gjv-qi-mq9"/>
                                     <outlet property="valueLabel" destination="Y1Q-GK-yiJ" id="sWp-2Y-AEe"/>
+                                    <outlet property="valueStepper" destination="iCk-8l-npg" id="nhN-iC-LDL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -229,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ovo-2r-k39" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-998" y="711"/>
+            <point key="canvasLocation" x="-999.20000000000005" y="710.19490254872574"/>
         </scene>
         <!--History CO2 Training View Controller-->
         <scene sceneID="Z3D-YP-RX9">
@@ -247,8 +253,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Training type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAY-4H-N0r" userLabel="Training type Label">
-                                            <rect key="frame" x="22" y="12" width="128" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Training type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAY-4H-N0r" userLabel="Training type Label">
+                                            <rect key="frame" x="15" y="12" width="99.5" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -261,6 +267,8 @@
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="xIt-KK-RX7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hNZ-RD-Y03" secondAttribute="leading" constant="20" symbolic="YES" id="4hn-fv-RyF"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CAY-4H-N0r" secondAttribute="trailing" constant="20" symbolic="YES" id="CiJ-gB-l6s"/>
                                         <constraint firstItem="CAY-4H-N0r" firstAttribute="centerY" secondItem="hNZ-RD-Y03" secondAttribute="centerY" id="L8K-By-UZa"/>
                                         <constraint firstItem="xIt-KK-RX7" firstAttribute="centerY" secondItem="hNZ-RD-Y03" secondAttribute="centerY" id="jda-K6-l5S"/>
                                         <constraint firstItem="CAY-4H-N0r" firstAttribute="leading" secondItem="hNZ-RD-Y03" secondAttribute="leading" constant="15" id="tdK-f5-5JM"/>
@@ -307,21 +315,23 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Interval" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhK-gU-TNc">
-                                            <rect key="frame" x="16" y="5" width="120" height="32"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interval" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhK-gU-TNc">
+                                            <rect key="frame" x="15" y="11" width="56.5" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0K-M7-y5N">
-                                            <rect key="frame" x="218" y="4" width="141" height="31"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0K-M7-y5N">
+                                            <rect key="frame" x="324" y="11.5" width="36" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="c0K-M7-y5N" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MeQ-zS-THi" secondAttribute="leading" constant="20" symbolic="YES" id="Aum-XX-yJk"/>
                                         <constraint firstItem="BhK-gU-TNc" firstAttribute="centerY" secondItem="MeQ-zS-THi" secondAttribute="centerY" id="DEs-uG-ylk"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BhK-gU-TNc" secondAttribute="trailing" constant="20" symbolic="YES" id="Gts-PN-oFQ"/>
                                         <constraint firstAttribute="trailing" secondItem="c0K-M7-y5N" secondAttribute="trailing" constant="15" id="WJA-ob-cRa"/>
                                         <constraint firstItem="BhK-gU-TNc" firstAttribute="leading" secondItem="MeQ-zS-THi" secondAttribute="leading" constant="15" id="eO6-A2-6gb"/>
                                         <constraint firstItem="c0K-M7-y5N" firstAttribute="centerY" secondItem="MeQ-zS-THi" secondAttribute="centerY" id="msU-nn-fdB"/>

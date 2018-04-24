@@ -10,7 +10,7 @@ import Foundation
 
 struct SettingsMenuItem {
     var text: String
-    var value: Int
+    var value: TimeInterval
 }
 
 struct SettingsSectionItem {
@@ -23,15 +23,15 @@ struct SettingsViewModel {
         SettingsSectionItem(
             text: "Current Max Breath Hold",
             rows: [
-                SettingsMenuItem(text: "Time", value: 0)
+                SettingsMenuItem(text: "Time", value: TimeInterval(1))
             ]
         ),
         SettingsSectionItem(
             text: "CO2/O2 Table",
             rows: [
-                SettingsMenuItem(text: "Rounds", value: 0),
-                SettingsMenuItem(text: "Respiration start time", value: 0),
-                SettingsMenuItem(text: "Respiration decrese time", value: 0)
+                SettingsMenuItem(text: "Rounds", value: TimeInterval(2)),
+                SettingsMenuItem(text: "Respiration start time", value: TimeInterval(3)),
+                SettingsMenuItem(text: "Respiration decrese time", value: TimeInterval(4))
             ]
         )
     ]

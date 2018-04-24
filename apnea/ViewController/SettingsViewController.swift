@@ -11,6 +11,10 @@ import UIKit
 class SettingsViewController: UITableViewController {
     let viewModel = SettingsViewModel()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return viewModel.rows[section].text
     }
@@ -28,8 +32,8 @@ class SettingsViewController: UITableViewController {
         
         let menuItem = viewModel.rows[indexPath.section].rows[indexPath.row]
         cell.typeLabel?.text = menuItem.text
-        cell.valueLabel?.text = String(menuItem.value)
-
+        cell.valueLabel?.setInterval(to: menuItem.value)
+        cell.valueStepper?.value = Double(menuItem.value)
         return cell
     }
     

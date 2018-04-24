@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4F3BC664208F0CBD00A0B363 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3BC663208F0CBD00A0B363 /* SettingsTableViewCell.swift */; };
+		4F7CEA28208F457D00F49C03 /* UITimeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEA27208F457D00F49C03 /* UITimeLabel.swift */; };
 		4FBDA66420453BF600174C9C /* CO2TrainingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA66320453BF600174C9C /* CO2TrainingTableViewCell.swift */; };
 		4FBDA6662045572800174C9C /* HistoryApneaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA6652045572800174C9C /* HistoryApneaViewModel.swift */; };
 		4FBDA6682045574F00174C9C /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA6672045574F00174C9C /* RootViewModel.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		4F3BC663208F0CBD00A0B363 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		4F7CEA27208F457D00F49C03 /* UITimeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITimeLabel.swift; sourceTree = "<group>"; };
 		4FBDA66320453BF600174C9C /* CO2TrainingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CO2TrainingTableViewCell.swift; sourceTree = "<group>"; };
 		4FBDA6652045572800174C9C /* HistoryApneaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryApneaViewModel.swift; sourceTree = "<group>"; };
 		4FBDA6672045574F00174C9C /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
@@ -99,11 +101,11 @@
 		4FBDA6692045576800174C9C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				4FBDA6672045574F00174C9C /* RootViewModel.swift */,
-				4FBDA6652045572800174C9C /* HistoryApneaViewModel.swift */,
-				4FBDA66F2045589F00174C9C /* SettingsViewModel.swift */,
-				4FBDA6732045596A00174C9C /* HistoryCO2TrainingViewModel.swift */,
 				4FBDA67720455ABD00174C9C /* CO2TrainingViewModel.swift */,
+				4FBDA6652045572800174C9C /* HistoryApneaViewModel.swift */,
+				4FBDA6732045596A00174C9C /* HistoryCO2TrainingViewModel.swift */,
+				4FBDA6672045574F00174C9C /* RootViewModel.swift */,
+				4FBDA66F2045589F00174C9C /* SettingsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -111,10 +113,10 @@
 		4FBDA66C204557A300174C9C /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				4FBDA66A2045578C00174C9C /* RootViewControllerDataSource.swift */,
-				4FBDA6712045592100174C9C /* HistoryApneaTestViewControllerDataSource.swift */,
 				4FBDA67520455A9D00174C9C /* CO2TrainingTableViewDataSource.swift */,
+				4FBDA6712045592100174C9C /* HistoryApneaTestViewControllerDataSource.swift */,
 				7181C05820710D6A007160CC /* HistoryCO2TrainingViewControllerDataSource.swift */,
+				4FBDA66A2045578C00174C9C /* RootViewControllerDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -122,13 +124,13 @@
 		4FBDA67920455C6E00174C9C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				7116D18B200EA37D00C1A2A4 /* RootViewController.swift */,
 				7116D18D200EA42100C1A2A4 /* ApneaTestViewController.swift */,
-				7116D18F200EA45900C1A2A4 /* SettingsViewController.swift */,
-				7116D191200EA48B00C1A2A4 /* HistoryViewController.swift */,
+				71B64C392039ECE20038B839 /* CO2TrainingViewController.swift */,
 				7152C4BC2014BE5000B558CD /* HistoryApneaTestViewController.swift */,
 				713C90492014D6EC00C3BF59 /* HistoryCO2TrainingViewController.swift */,
-				71B64C392039ECE20038B839 /* CO2TrainingViewController.swift */,
+				7116D191200EA48B00C1A2A4 /* HistoryViewController.swift */,
+				7116D18B200EA37D00C1A2A4 /* RootViewController.swift */,
+				7116D18F200EA45900C1A2A4 /* SettingsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -136,9 +138,9 @@
 		4FBDA67A20455E8100174C9C /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
-				4FBDA66D204557C700174C9C /* RootViewControllerDelegate.swift */,
 				7181C05420710450007160CC /* HistoryApneaTestViewControllerDelegate.swift */,
 				7181C056207109F8007160CC /* HistoryCO2TrainingViewControllerDelegate.swift */,
+				4FBDA66D204557C700174C9C /* RootViewControllerDelegate.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -146,8 +148,8 @@
 		4FE6C02F2018C100008A038A /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				4FE6C02D2018BFA7008A038A /* HistoryApneaTestTableViewCell.swift */,
 				4FBDA66320453BF600174C9C /* CO2TrainingTableViewCell.swift */,
+				4FE6C02D2018BFA7008A038A /* HistoryApneaTestTableViewCell.swift */,
 				7181C05A20712A32007160CC /* HistoryCO2TrainingTableViewCell.swift */,
 				4F3BC663208F0CBD00A0B363 /* SettingsTableViewCell.swift */,
 			);
@@ -176,19 +178,20 @@
 			isa = PBXGroup;
 			children = (
 				7116D179200B4D5600C1A2A4 /* AppDelegate.swift */,
-				7116D17D200B4D5600C1A2A4 /* Main.storyboard */,
 				7116D180200B4D5600C1A2A4 /* Assets.xcassets */,
-				7116D182200B4D5600C1A2A4 /* LaunchScreen.storyboard */,
+				4FD5B3DC201B5BB80082FA81 /* ColorSchema.swift */,
+				4FBDA66C204557A300174C9C /* DataSource */,
 				714DA08B206FB743002F05FB /* DataStore */,
+				4FBDA67A20455E8100174C9C /* Delegate */,
 				7116D185200B4D5600C1A2A4 /* Info.plist */,
+				7116D182200B4D5600C1A2A4 /* LaunchScreen.storyboard */,
+				4FD1314A201F0FA800602873 /* Localizable.strings */,
+				7116D17D200B4D5600C1A2A4 /* Main.storyboard */,
 				7116D193200EA9E800C1A2A4 /* MenuItem.swift */,
 				4FE6C02F2018C100008A038A /* TableViewCell */,
-				4FD5B3DC201B5BB80082FA81 /* ColorSchema.swift */,
-				4FD1314A201F0FA800602873 /* Localizable.strings */,
 				4FBDA67920455C6E00174C9C /* ViewController */,
 				4FBDA6692045576800174C9C /* ViewModel */,
-				4FBDA66C204557A300174C9C /* DataSource */,
-				4FBDA67A20455E8100174C9C /* Delegate */,
+				4F7CEA27208F457D00F49C03 /* UITimeLabel.swift */,
 			);
 			path = apnea;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 			files = (
 				4FBDA67820455ABD00174C9C /* CO2TrainingViewModel.swift in Sources */,
 				71B64C3A2039ECE20038B839 /* CO2TrainingViewController.swift in Sources */,
+				4F7CEA28208F457D00F49C03 /* UITimeLabel.swift in Sources */,
 				7116D18E200EA42100C1A2A4 /* ApneaTestViewController.swift in Sources */,
 				4FD5B3DD201B5BB80082FA81 /* ColorSchema.swift in Sources */,
 				4FBDA6662045572800174C9C /* HistoryApneaViewModel.swift in Sources */,

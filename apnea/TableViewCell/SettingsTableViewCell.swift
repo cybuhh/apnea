@@ -10,7 +10,17 @@ import UIKit
 
 class SettingsTableViewCell: UITableViewCell {
     @IBOutlet weak var typeLabel: UILabel!
-    @IBOutlet weak var valueLabel: UILabel!
+    @IBOutlet weak var valueLabel: UITimeLabel!
+    @IBOutlet weak var valueStepper: UIStepper!
+    
+    @IBAction func stepperValueChanged(_ sender: UIStepper, forEvent event: UIEvent) {
+        valueLabel.setInterval(to: sender.value)
+        let intervalValue = sender.value
+        DispatchQueue.global(qos: .background).async {
+            //print("New value \(self.valueStepper.value)")
+            print("New value \(intervalValue)")
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
