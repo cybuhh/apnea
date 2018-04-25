@@ -20,6 +20,7 @@
 		4FBDA67620455A9D00174C9C /* CO2TrainingTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA67520455A9D00174C9C /* CO2TrainingTableViewDataSource.swift */; };
 		4FBDA67820455ABD00174C9C /* CO2TrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA67720455ABD00174C9C /* CO2TrainingViewModel.swift */; };
 		4FD13148201F0FA800602873 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4FD1314A201F0FA800602873 /* Localizable.strings */; };
+		4FD3E6B920909EAA0008AFE4 /* TimeIntervalFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD3E6B820909EAA0008AFE4 /* TimeIntervalFormater.swift */; };
 		4FD5B3DD201B5BB80082FA81 /* ColorSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5B3DC201B5BB80082FA81 /* ColorSchema.swift */; };
 		4FE6C02E2018BFA8008A038A /* HistoryApneaTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE6C02D2018BFA7008A038A /* HistoryApneaTestTableViewCell.swift */; };
 		7116D17A200B4D5600C1A2A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116D179200B4D5600C1A2A4 /* AppDelegate.swift */; };
@@ -59,6 +60,7 @@
 		4FD13149201F0FA800602873 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4FD1314B201F0FC600602873 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4FD1314C201F10B400602873 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4FD3E6B820909EAA0008AFE4 /* TimeIntervalFormater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalFormater.swift; sourceTree = "<group>"; };
 		4FD5B3DC201B5BB80082FA81 /* ColorSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchema.swift; sourceTree = "<group>"; };
 		4FE6C02D2018BFA7008A038A /* HistoryApneaTestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryApneaTestTableViewCell.swift; sourceTree = "<group>"; };
 		7116D176200B4D5600C1A2A4 /* apnea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apnea.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,6 +194,7 @@
 				4FBDA67920455C6E00174C9C /* ViewController */,
 				4FBDA6692045576800174C9C /* ViewModel */,
 				4F7CEA27208F457D00F49C03 /* UITimeLabel.swift */,
+				4FD3E6B820909EAA0008AFE4 /* TimeIntervalFormater.swift */,
 			);
 			path = apnea;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				7116D192200EA48B00C1A2A4 /* HistoryViewController.swift in Sources */,
 				7181C05520710450007160CC /* HistoryApneaTestViewControllerDelegate.swift in Sources */,
 				714DA08A206FB737002F05FB /* HistoryCO2TrainingDataStore.swift in Sources */,
+				4FD3E6B920909EAA0008AFE4 /* TimeIntervalFormater.swift in Sources */,
 				7116D190200EA45900C1A2A4 /* SettingsViewController.swift in Sources */,
 				4FBDA6702045589F00174C9C /* SettingsViewModel.swift in Sources */,
 			);

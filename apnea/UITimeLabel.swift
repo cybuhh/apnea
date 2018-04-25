@@ -13,9 +13,6 @@ class UITimeLabel: UILabel {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        dateFormater.unitsStyle = .full
-        dateFormater.allowedUnits = [.minute, .second]
-        dateFormater.zeroFormattingBehavior = [ .dropAll ]
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -23,6 +20,6 @@ class UITimeLabel: UILabel {
     }
     
     func setInterval(to interval: TimeInterval) {
-        self.text = dateFormater.string(from: interval)
+        self.text = TimeIntervalFormater.sharedInstance.format(from: interval)
     }
 }

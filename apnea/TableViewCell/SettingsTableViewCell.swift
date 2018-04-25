@@ -15,10 +15,12 @@ class SettingsTableViewCell: UITableViewCell {
     
     @IBAction func stepperValueChanged(_ sender: UIStepper, forEvent event: UIEvent) {
         valueLabel.setInterval(to: sender.value)
-        let intervalValue = sender.value
-        DispatchQueue.global(qos: .background).async {
-            //print("New value \(self.valueStepper.value)")
-            print("New value \(intervalValue)")
+        DispatchQueue.global(qos: .background).async(execute: curryIntervalValue(interval: sender.value))
+    }
+    
+    func curryIntervalValue(interval: Double) -> (() -> ()) {
+        return {
+            print("New value \(interval)")
         }
     }
     
