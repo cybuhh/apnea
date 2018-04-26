@@ -16,13 +16,9 @@ enum CO2TrainingActionTypes: String {
 
 class CO2TrainingTableViewDataSource: NSObject, UITableViewDataSource {
     let viewModel: CO2TrainingViewModel
-    let dateFormater = DateComponentsFormatter()
     
     init(viewModel: CO2TrainingViewModel) {
         self.viewModel = viewModel
-        dateFormater.unitsStyle = .abbreviated
-        dateFormater.allowedUnits = [.minute, .second]
-        dateFormater.zeroFormattingBehavior = [ .dropAll ]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,7 +31,7 @@ class CO2TrainingTableViewDataSource: NSObject, UITableViewDataSource {
         let tableItem = viewModel.rows[indexPath.row]
         cell.countLabel?.text = "\(tableItem.round)"
         cell.actionLabel?.text = indexPath.row%2 == 0 ? CO2TrainingActionTypes.Respiration.rawValue : CO2TrainingActionTypes.Apnea.rawValue
-        cell.timeLabel?.text = dateFormater.string(from: tableItem.interval)
+        cell.timeLabel?.text = TimeIntervalFormater.sharedInstance.format(from: tableItem.interval)
         
         return cell
     }

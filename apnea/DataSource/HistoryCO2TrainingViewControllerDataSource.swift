@@ -11,13 +11,9 @@ import UIKit
 
 class HistoryCO2TrainingViewControllerDataSource: NSObject, UITableViewDataSource {
     let viewModel: HistoryCO2TrainingViewModel
-    let dateFormater = DateComponentsFormatter()
     
     init(viewModel: HistoryCO2TrainingViewModel) {
         self.viewModel = viewModel
-        dateFormater.unitsStyle = .abbreviated
-        dateFormater.allowedUnits = [.minute, .second]
-        dateFormater.zeroFormattingBehavior = [ .dropAll ]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -11,13 +11,9 @@ import UIKit
 
 class HistoryApneaTestViewControllerDataSource: NSObject, UITableViewDataSource {
     let viewModel: HistoryApneaTestViewModel
-    let dateFormater = DateComponentsFormatter()
     
     init(viewModel: HistoryApneaTestViewModel) {
         self.viewModel = viewModel
-        dateFormater.unitsStyle = .abbreviated
-        dateFormater.allowedUnits = [.minute, .second]
-        dateFormater.zeroFormattingBehavior = [ .dropAll ]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,7 +29,7 @@ class HistoryApneaTestViewControllerDataSource: NSObject, UITableViewDataSource 
             dateStyle: DateFormatter.Style.long,
             timeStyle: DateFormatter.Style.none)
         
-        cell.intervalLabel.text = self.dateFormater.string(from: menuItem.interval)
+        cell.intervalLabel.text = TimeIntervalFormater.sharedInstance.format(from: menuItem.interval)
         return cell
     }
 }

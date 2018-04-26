@@ -23,6 +23,7 @@
 		4FD3E6B920909EAA0008AFE4 /* TimeIntervalFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD3E6B820909EAA0008AFE4 /* TimeIntervalFormater.swift */; };
 		4FD5B3DD201B5BB80082FA81 /* ColorSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5B3DC201B5BB80082FA81 /* ColorSchema.swift */; };
 		4FE6C02E2018BFA8008A038A /* HistoryApneaTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE6C02D2018BFA7008A038A /* HistoryApneaTestTableViewCell.swift */; };
+		71016275209273B7008F1567 /* SettingsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71016274209273B7008F1567 /* SettingsDataStore.swift */; };
 		7116D17A200B4D5600C1A2A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116D179200B4D5600C1A2A4 /* AppDelegate.swift */; };
 		7116D17F200B4D5600C1A2A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7116D17D200B4D5600C1A2A4 /* Main.storyboard */; };
 		7116D181200B4D5600C1A2A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7116D180200B4D5600C1A2A4 /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		4FD3E6B820909EAA0008AFE4 /* TimeIntervalFormater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalFormater.swift; sourceTree = "<group>"; };
 		4FD5B3DC201B5BB80082FA81 /* ColorSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchema.swift; sourceTree = "<group>"; };
 		4FE6C02D2018BFA7008A038A /* HistoryApneaTestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryApneaTestTableViewCell.swift; sourceTree = "<group>"; };
+		71016274209273B7008F1567 /* SettingsDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDataStore.swift; sourceTree = "<group>"; };
 		7116D176200B4D5600C1A2A4 /* apnea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apnea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7116D179200B4D5600C1A2A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7116D17E200B4D5600C1A2A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			children = (
 				714DA087206FB737002F05FB /* HistoryApneaTestDataStore.swift */,
 				714DA088206FB737002F05FB /* HistoryCO2TrainingDataStore.swift */,
+				71016274209273B7008F1567 /* SettingsDataStore.swift */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				713C904A2014D6EC00C3BF59 /* HistoryCO2TrainingViewController.swift in Sources */,
 				4FBDA66B2045578C00174C9C /* RootViewControllerDataSource.swift in Sources */,
 				4FBDA67620455A9D00174C9C /* CO2TrainingTableViewDataSource.swift in Sources */,
+				71016275209273B7008F1567 /* SettingsDataStore.swift in Sources */,
 				4FE6C02E2018BFA8008A038A /* HistoryApneaTestTableViewCell.swift in Sources */,
 				4FBDA66420453BF600174C9C /* CO2TrainingTableViewCell.swift in Sources */,
 				714DA089206FB737002F05FB /* HistoryApneaTestDataStore.swift in Sources */,

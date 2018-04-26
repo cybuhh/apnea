@@ -23,15 +23,15 @@ struct SettingsViewModel {
         SettingsSectionItem(
             text: "Current Max Breath Hold",
             rows: [
-                SettingsMenuItem(text: "Time", value: TimeInterval(1))
+                SettingsMenuItem(text: "Time", value: SettingsDataStore.get(SettingsStoreKeys.settingsMaxTime))
             ]
         ),
         SettingsSectionItem(
             text: "CO2/O2 Table",
             rows: [
-                SettingsMenuItem(text: "Rounds", value: TimeInterval(2)),
-                SettingsMenuItem(text: "Respiration start time", value: TimeInterval(3)),
-                SettingsMenuItem(text: "Respiration decrese time", value: TimeInterval(4))
+                SettingsMenuItem(text: "Rounds", value: SettingsDataStore.get(SettingsStoreKeys.settingsRounds)),
+                SettingsMenuItem(text: "Respiration start time", value: SettingsDataStore.get(SettingsStoreKeys.settingsRespirationStart)),
+                SettingsMenuItem(text: "Respiration decrese time", value: SettingsDataStore.get(SettingsStoreKeys.settingsDecraseTime))
             ]
         )
     ]
