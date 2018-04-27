@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4F3BC664208F0CBD00A0B363 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3BC663208F0CBD00A0B363 /* SettingsTableViewCell.swift */; };
+		4F43561C2093213A008BB76C /* apneaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F43561B2093213A008BB76C /* apneaTests.swift */; };
 		4F6842402092ED8100F1462B /* UISettingsStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F68423F2092ED8100F1462B /* UISettingsStepper.swift */; };
 		4F7CEA28208F457D00F49C03 /* UITimeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEA27208F457D00F49C03 /* UITimeLabel.swift */; };
 		4FBDA66420453BF600174C9C /* CO2TrainingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA66320453BF600174C9C /* CO2TrainingTableViewCell.swift */; };
@@ -46,8 +47,21 @@
 		BAEE7A4A98E58D0D987B0ABB /* Pods_apnea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7362CBC8B31546F76BEF5F6B /* Pods_apnea.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4F43561E2093213A008BB76C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7116D16E200B4D5600C1A2A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7116D175200B4D5600C1A2A4;
+			remoteInfo = apnea;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		4F3BC663208F0CBD00A0B363 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		4F4356192093213A008BB76C /* apneaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = apneaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F43561B2093213A008BB76C /* apneaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apneaTests.swift; sourceTree = "<group>"; };
+		4F43561D2093213A008BB76C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F68423F2092ED8100F1462B /* UISettingsStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISettingsStepper.swift; sourceTree = "<group>"; };
 		4F7CEA27208F457D00F49C03 /* UITimeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITimeLabel.swift; sourceTree = "<group>"; };
 		4FBDA66320453BF600174C9C /* CO2TrainingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CO2TrainingTableViewCell.swift; sourceTree = "<group>"; };
@@ -93,6 +107,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4F4356162093213A008BB76C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7116D173200B4D5600C1A2A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -104,6 +125,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F43561A2093213A008BB76C /* apneaTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F43561B2093213A008BB76C /* apneaTests.swift */,
+				4F43561D2093213A008BB76C /* Info.plist */,
+			);
+			path = apneaTests;
+			sourceTree = "<group>";
+		};
 		4FBDA6692045576800174C9C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				7116D178200B4D5600C1A2A4 /* apnea */,
+				4F43561A2093213A008BB76C /* apneaTests */,
 				7116D177200B4D5600C1A2A4 /* Products */,
 				B68770DDC51B80FDD72B2BDA /* Pods */,
 				8306130A3BC3B0CC0C873D33 /* Frameworks */,
@@ -176,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				7116D176200B4D5600C1A2A4 /* apnea.app */,
+				4F4356192093213A008BB76C /* apneaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -234,6 +266,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4F4356182093213A008BB76C /* apneaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F4356222093213A008BB76C /* Build configuration list for PBXNativeTarget "apneaTests" */;
+			buildPhases = (
+				4F4356152093213A008BB76C /* Sources */,
+				4F4356162093213A008BB76C /* Frameworks */,
+				4F4356172093213A008BB76C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F43561F2093213A008BB76C /* PBXTargetDependency */,
+			);
+			name = apneaTests;
+			productName = apneaTests;
+			productReference = 4F4356192093213A008BB76C /* apneaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		7116D175200B4D5600C1A2A4 /* apnea */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7116D188200B4D5600C1A2A4 /* Build configuration list for PBXNativeTarget "apnea" */;
@@ -260,10 +310,15 @@
 		7116D16E200B4D5600C1A2A4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = cybuhh;
 				TargetAttributes = {
+					4F4356182093213A008BB76C = {
+						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7116D175200B4D5600C1A2A4;
+					};
 					7116D175200B4D5600C1A2A4 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -285,11 +340,19 @@
 			projectRoot = "";
 			targets = (
 				7116D175200B4D5600C1A2A4 /* apnea */,
+				4F4356182093213A008BB76C /* apneaTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4F4356172093213A008BB76C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7116D174200B4D5600C1A2A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -358,6 +421,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4F4356152093213A008BB76C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F43561C2093213A008BB76C /* apneaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7116D172200B4D5600C1A2A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -399,6 +470,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4F43561F2093213A008BB76C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7116D175200B4D5600C1A2A4 /* apnea */;
+			targetProxy = 4F43561E2093213A008BB76C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		4FD1314A201F0FA800602873 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
@@ -429,6 +508,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4F4356202093213A008BB76C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = apneaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cybuhh.apneaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/apnea.app/apnea";
+			};
+			name = Debug;
+		};
+		4F4356212093213A008BB76C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = apneaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cybuhh.apneaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/apnea.app/apnea";
+			};
+			name = Release;
+		};
 		7116D186200B4D5600C1A2A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -578,6 +693,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4F4356222093213A008BB76C /* Build configuration list for PBXNativeTarget "apneaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F4356202093213A008BB76C /* Debug */,
+				4F4356212093213A008BB76C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7116D171200B4D5600C1A2A4 /* Build configuration list for PBXProject "apnea" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

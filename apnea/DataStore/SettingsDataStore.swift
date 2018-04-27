@@ -19,6 +19,9 @@ class SettingsDataStore {
     let userDefaults = UserDefaults.standard
         
     enum storeKeys: String {
+        /*enum Settings: String {
+         case maxTimes='settingsMaxTime'
+        }*/
         case settingsMaxTime
         case settingsRounds
         case settingsRespirationStart

@@ -217,10 +217,11 @@
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="obn-HT-jWr" secondAttribute="trailing" constant="20" symbolic="YES" id="DNm-Cf-USW"/>
                                         <constraint firstAttribute="trailing" secondItem="iCk-8l-npg" secondAttribute="trailing" constant="10" id="Hkl-Du-O2r"/>
                                         <constraint firstItem="iCk-8l-npg" firstAttribute="centerY" secondItem="i7N-Iy-TJB" secondAttribute="centerY" id="L6v-ta-9EF"/>
+                                        <constraint firstAttribute="bottom" secondItem="obn-HT-jWr" secondAttribute="bottom" constant="11.5" id="Pa6-al-tCz"/>
                                         <constraint firstItem="Y1Q-GK-yiJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i7N-Iy-TJB" secondAttribute="leading" constant="20" symbolic="YES" id="Qyf-69-6GA"/>
                                         <constraint firstItem="Y1Q-GK-yiJ" firstAttribute="centerY" secondItem="i7N-Iy-TJB" secondAttribute="centerY" id="U4L-1u-1Sy"/>
-                                        <constraint firstItem="obn-HT-jWr" firstAttribute="centerY" secondItem="i7N-Iy-TJB" secondAttribute="centerY" id="Yfo-q4-FaA"/>
                                         <constraint firstItem="obn-HT-jWr" firstAttribute="leading" secondItem="i7N-Iy-TJB" secondAttribute="leading" constant="10" id="hvl-xi-zuO"/>
+                                        <constraint firstItem="obn-HT-jWr" firstAttribute="top" secondItem="i7N-Iy-TJB" secondAttribute="top" constant="11" id="uxN-4R-vAc"/>
                                         <constraint firstItem="iCk-8l-npg" firstAttribute="leading" secondItem="Y1Q-GK-yiJ" secondAttribute="trailing" constant="10" id="vwA-Bu-muz"/>
                                     </constraints>
                                 </tableViewCellContentView>
