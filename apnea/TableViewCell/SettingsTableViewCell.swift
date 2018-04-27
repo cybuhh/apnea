@@ -11,16 +11,19 @@ import UIKit
 class SettingsTableViewCell: UITableViewCell {
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var valueLabel: UITimeLabel!
-    @IBOutlet weak var valueStepper: UIStepper!
+    @IBOutlet weak var valueStepper: UISettingsStepper!
     
-    @IBAction func stepperValueChanged(_ sender: UIStepper, forEvent event: UIEvent) {
+    @IBAction func stepperValueChanged(_ sender: UISettingsStepper, forEvent event: UIEvent) {
         valueLabel.setInterval(to: sender.value)
-        DispatchQueue.global(qos: .background).async(execute: curryIntervalValue(interval: sender.value))
+        DispatchQueue.global(qos: .background).async(execute: curryIntervalValue(interval: Int(sender.value), storeKey: sender.storeKey!))
     }
     
-    func curryIntervalValue(interval: Double) -> (() -> ()) {
+    func curryIntervalValue(interval: Int, storeKey: SettingsDataStore.storeKeys) -> (() -> ()) {
         return {
-            print("New value \(interval)")
+            /* temporary shit */
+            let dataStore = SettingsDataStore()
+            dataStore.set(forType: storeKey, newValue: interval)
+            print("New value \(interval) stored in \(storeKey)")
         }
     }
     

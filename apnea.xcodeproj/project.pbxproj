@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4F3BC664208F0CBD00A0B363 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3BC663208F0CBD00A0B363 /* SettingsTableViewCell.swift */; };
+		4F6842402092ED8100F1462B /* UISettingsStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F68423F2092ED8100F1462B /* UISettingsStepper.swift */; };
 		4F7CEA28208F457D00F49C03 /* UITimeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEA27208F457D00F49C03 /* UITimeLabel.swift */; };
 		4FBDA66420453BF600174C9C /* CO2TrainingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA66320453BF600174C9C /* CO2TrainingTableViewCell.swift */; };
 		4FBDA6662045572800174C9C /* HistoryApneaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA6652045572800174C9C /* HistoryApneaViewModel.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		4F3BC663208F0CBD00A0B363 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		4F68423F2092ED8100F1462B /* UISettingsStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISettingsStepper.swift; sourceTree = "<group>"; };
 		4F7CEA27208F457D00F49C03 /* UITimeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITimeLabel.swift; sourceTree = "<group>"; };
 		4FBDA66320453BF600174C9C /* CO2TrainingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CO2TrainingTableViewCell.swift; sourceTree = "<group>"; };
 		4FBDA6652045572800174C9C /* HistoryApneaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryApneaViewModel.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				4FBDA6692045576800174C9C /* ViewModel */,
 				4F7CEA27208F457D00F49C03 /* UITimeLabel.swift */,
 				4FD3E6B820909EAA0008AFE4 /* TimeIntervalFormater.swift */,
+				4F68423F2092ED8100F1462B /* UISettingsStepper.swift */,
 			);
 			path = apnea;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				71B64C3A2039ECE20038B839 /* CO2TrainingViewController.swift in Sources */,
 				4F7CEA28208F457D00F49C03 /* UITimeLabel.swift in Sources */,
 				7116D18E200EA42100C1A2A4 /* ApneaTestViewController.swift in Sources */,
+				4F6842402092ED8100F1462B /* UISettingsStepper.swift in Sources */,
 				4FD5B3DD201B5BB80082FA81 /* ColorSchema.swift in Sources */,
 				4FBDA6662045572800174C9C /* HistoryApneaViewModel.swift in Sources */,
 				7181C05920710D6A007160CC /* HistoryCO2TrainingViewControllerDataSource.swift in Sources */,

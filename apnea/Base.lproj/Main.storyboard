@@ -194,7 +194,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="9999" translatesAutoresizingMaskIntoConstraints="NO" id="iCk-8l-npg">
+                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="9999" translatesAutoresizingMaskIntoConstraints="NO" id="iCk-8l-npg" customClass="UISettingsStepper" customModule="apnea" customModuleProvider="target">
                                             <rect key="frame" x="271" y="7.5" width="94" height="29"/>
                                             <connections>
                                                 <action selector="stepperValueChanged:forEvent:" destination="yBJ-7L-dM4" eventType="valueChanged" id="Xrl-GO-feg"/>

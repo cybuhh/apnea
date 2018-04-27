@@ -32,8 +32,9 @@ class SettingsViewController: UITableViewController {
         
         let menuItem = viewModel.rows[indexPath.section].rows[indexPath.row]
         cell.typeLabel?.text = menuItem.text
-        cell.valueLabel?.setInterval(to: menuItem.value)
+        cell.valueLabel?.setInterval(to: TimeInterval(menuItem.value))
         cell.valueStepper?.value = Double(menuItem.value)
+        cell.valueStepper?.storeKey = menuItem.storeKey
         return cell
     }
     
