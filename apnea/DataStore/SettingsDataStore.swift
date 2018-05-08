@@ -13,27 +13,20 @@ import Foundation
     case maxTime, rouds, repirationStart, decreaseTime
 }*/
 
-class SettingsDataStore {
-    let encoder = JSONEncoder()
-    let decoder = JSONDecoder()
-    let userDefaults = UserDefaults.standard
-        
-    enum storeKeys: String {
-        /*enum Settings: String {
-         case maxTimes='settingsMaxTime'
-        }*/
-        case settingsMaxTime
-        case settingsRounds
-        case settingsRespirationStart
-        case settingsDecraseTime
+class SettingsDataStore: AbstractHistoryDataStore {
+  enum StoreKeys: String {
+        case MaxTime
+        case Rounds
+        case RespirationStart
+        case DecraseTime
     }
     
-    func set(forType type: storeKeys, newValue value: Int) {
-        userDefaults.set(value, forKey: type.rawValue);
+    func set(forType type: StoreKeys, newValue value: Int) {
+        userDefaults.set(value, forKey: type.rawValue)
         userDefaults.synchronize()
     }
     
-    func get(forType type: storeKeys) -> Int {
+    func get(forType type: StoreKeys) -> Int {
         return userDefaults.integer(forKey: type.rawValue)
     }
 }

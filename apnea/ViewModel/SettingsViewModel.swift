@@ -11,7 +11,7 @@ import Foundation
 struct SettingsMenuItem {
     var text: String
     var value: Int
-    var storeKey: SettingsDataStore.storeKeys
+    var storeKey: SettingsDataStore.StoreKeys
 }
 
 struct SettingsSectionItem {
@@ -28,15 +28,23 @@ class SettingsViewModel {
             SettingsSectionItem(
                 text: "Current Max Breath Hold",
                 rows: [
-                    SettingsMenuItem(text: "Time", value: dataStore.get(forType: SettingsDataStore.storeKeys.settingsMaxTime), storeKey: SettingsDataStore.storeKeys.settingsMaxTime)
+                    SettingsMenuItem(text: "Time",
+                                     value: dataStore.get(forType: SettingsDataStore.StoreKeys.MaxTime),
+                                     storeKey: SettingsDataStore.StoreKeys.MaxTime)
                 ]
             ),
             SettingsSectionItem(
                 text: "CO2/O2 Table",
                 rows: [
-                    SettingsMenuItem(text: "Rounds", value: dataStore.get(forType: SettingsDataStore.storeKeys.settingsRounds), storeKey: SettingsDataStore.storeKeys.settingsRounds),
-                    SettingsMenuItem(text: "Respiration start time", value: dataStore.get(forType: SettingsDataStore.storeKeys.settingsRespirationStart), storeKey: SettingsDataStore.storeKeys.settingsRespirationStart),
-                    SettingsMenuItem(text: "Respiration decrese time", value: dataStore.get(forType: SettingsDataStore.storeKeys.settingsDecraseTime), storeKey: SettingsDataStore.storeKeys.settingsDecraseTime)
+                    SettingsMenuItem(text: "Rounds",
+                                     value: dataStore.get(forType: SettingsDataStore.StoreKeys.Rounds),
+                                     storeKey: SettingsDataStore.StoreKeys.Rounds),
+                    SettingsMenuItem(text: "Respiration start time",
+                                     value: dataStore.get(forType: SettingsDataStore.StoreKeys.RespirationStart),
+                                     storeKey: SettingsDataStore.StoreKeys.RespirationStart),
+                    SettingsMenuItem(text: "Respiration decrese time",
+                                     value: dataStore.get(forType: SettingsDataStore.StoreKeys.DecraseTime),
+                                     storeKey: SettingsDataStore.StoreKeys.DecraseTime)
                 ]
             )
         ]

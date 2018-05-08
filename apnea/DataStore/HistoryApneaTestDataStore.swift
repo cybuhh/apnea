@@ -8,11 +8,7 @@
 
 import Foundation
 
-class HistoryApneaTestDataStore {
-    let encoder = JSONEncoder()
-    let decoder = JSONDecoder()
-    let userDefaults = UserDefaults.standard
-    
+class HistoryApneaTestDataStore: AbstractHistoryDataStore {
     private enum storeKeys: String {
         case historyApnea
     }

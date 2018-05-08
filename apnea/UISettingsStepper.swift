@@ -9,5 +9,5 @@
 import UIKit
 
 class UISettingsStepper: UIStepper {
-    var storeKey: SettingsDataStore.storeKeys?
+    var storeKey: SettingsDataStore.StoreKeys?
 }

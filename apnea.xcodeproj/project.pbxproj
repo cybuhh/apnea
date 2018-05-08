@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4F3BC664208F0CBD00A0B363 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3BC663208F0CBD00A0B363 /* SettingsTableViewCell.swift */; };
 		4F43561C2093213A008BB76C /* apneaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F43561B2093213A008BB76C /* apneaTests.swift */; };
+		4F625BAF20A1F1E800291703 /* AbstractHistoryDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F625BAE20A1F1E800291703 /* AbstractHistoryDataStore.swift */; };
 		4F6842402092ED8100F1462B /* UISettingsStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F68423F2092ED8100F1462B /* UISettingsStepper.swift */; };
 		4F7CEA28208F457D00F49C03 /* UITimeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEA27208F457D00F49C03 /* UITimeLabel.swift */; };
 		4FBDA66420453BF600174C9C /* CO2TrainingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDA66320453BF600174C9C /* CO2TrainingTableViewCell.swift */; };
@@ -62,6 +63,7 @@
 		4F4356192093213A008BB76C /* apneaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = apneaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F43561B2093213A008BB76C /* apneaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apneaTests.swift; sourceTree = "<group>"; };
 		4F43561D2093213A008BB76C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F625BAE20A1F1E800291703 /* AbstractHistoryDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractHistoryDataStore.swift; sourceTree = "<group>"; };
 		4F68423F2092ED8100F1462B /* UISettingsStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISettingsStepper.swift; sourceTree = "<group>"; };
 		4F7CEA27208F457D00F49C03 /* UITimeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITimeLabel.swift; sourceTree = "<group>"; };
 		4FBDA66320453BF600174C9C /* CO2TrainingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CO2TrainingTableViewCell.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				714DA087206FB737002F05FB /* HistoryApneaTestDataStore.swift */,
 				714DA088206FB737002F05FB /* HistoryCO2TrainingDataStore.swift */,
 				71016274209273B7008F1567 /* SettingsDataStore.swift */,
+				4F625BAE20A1F1E800291703 /* AbstractHistoryDataStore.swift */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				4F3BC664208F0CBD00A0B363 /* SettingsTableViewCell.swift in Sources */,
 				4FBDA66E204557C700174C9C /* RootViewControllerDelegate.swift in Sources */,
 				7116D194200EA9E800C1A2A4 /* MenuItem.swift in Sources */,
+				4F625BAF20A1F1E800291703 /* AbstractHistoryDataStore.swift in Sources */,
 				4FBDA6722045592100174C9C /* HistoryApneaTestViewControllerDataSource.swift in Sources */,
 				4FBDA6742045596A00174C9C /* HistoryCO2TrainingViewModel.swift in Sources */,
 				7116D192200EA48B00C1A2A4 /* HistoryViewController.swift in Sources */,

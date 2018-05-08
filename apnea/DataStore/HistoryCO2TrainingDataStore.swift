@@ -8,11 +8,7 @@
 
 import Foundation
 
-class HistoryCO2TrainingDataStore {
-    let encoder = JSONEncoder()
-    let decoder = JSONDecoder()
-    let userDefaults = UserDefaults.standard
-    
+class HistoryCO2TrainingDataStore: AbstractHistoryDataStore {
     private enum storeKeys: String {
         case historyCO2Training
     }

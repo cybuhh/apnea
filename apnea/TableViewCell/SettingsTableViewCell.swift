@@ -18,7 +18,7 @@ class SettingsTableViewCell: UITableViewCell {
         DispatchQueue.global(qos: .background).async(execute: curryIntervalValue(interval: Int(sender.value), storeKey: sender.storeKey!))
     }
     
-    func curryIntervalValue(interval: Int, storeKey: SettingsDataStore.storeKeys) -> (() -> ()) {
+    func curryIntervalValue(interval: Int, storeKey: SettingsDataStore.StoreKeys) -> (() -> ()) {
         return {
             /* temporary shit */
             let dataStore = SettingsDataStore()
