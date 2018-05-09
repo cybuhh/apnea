@@ -15,10 +15,10 @@ import Foundation
 
 class SettingsDataStore: AbstractHistoryDataStore {
   enum StoreKeys: String {
-        case MaxTime
-        case Rounds
-        case RespirationStart
-        case DecraseTime
+        case maxTime
+        case rounds
+        case respirationStart
+        case decraseTime
     }
     
     func set(forType type: StoreKeys, newValue value: Int) {

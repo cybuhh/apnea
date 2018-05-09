@@ -32,13 +32,15 @@ class SettingsViewController: UITableViewController {
   
     let menuItem = viewModel.rows[indexPath.section].rows[indexPath.row]
     cell.typeLabel?.text = menuItem.text
-    if (menuItem.type == UISettingsType.interval) {
-      cell.valueLabel?.setInterval(to: TimeInterval(menuItem.value!))
+    
+    if let settingsType = menuItem.type, case .interval = settingsType {
+      cell.valueLabel?.setInterval(to: TimeInterval(menuItem.value))
     } else {
-      cell.valueLabel?.text = "\(menuItem.value!)"
+      cell.valueLabel?.text = "\(menuItem.value)"
     }
+    
     cell.valueStepper?.type = menuItem.type
-    cell.valueStepper?.value = Double(menuItem.value!)
+    cell.valueStepper?.value = Double(menuItem.value)
     cell.valueStepper?.storeKey = menuItem.storeKey
     return cell
   }
