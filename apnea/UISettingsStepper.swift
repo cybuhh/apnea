@@ -8,6 +8,12 @@
 
 import UIKit
 
+enum UISettingsType {
+  case interval
+  case value
+}
+
 class UISettingsStepper: UIStepper {
-    var storeKey: SettingsDataStore.StoreKeys?
+  var storeKey: SettingsDataStore.StoreKeys?
+  var type: UISettingsType?
 }
