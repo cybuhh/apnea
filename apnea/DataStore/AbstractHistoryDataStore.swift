@@ -12,8 +12,4 @@ class AbstractHistoryDataStore {
   let encoder = JSONEncoder()
   let decoder = JSONDecoder()
   let userDefaults = UserDefaults.standard
-
-  private init() {
-    
-  }
 }

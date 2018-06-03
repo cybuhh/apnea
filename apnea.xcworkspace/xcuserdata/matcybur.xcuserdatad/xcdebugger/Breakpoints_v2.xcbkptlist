@@ -40,7 +40,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "apnea/DataSource/CO2TrainingTableViewDataSource.swift"
-            timestampString = "541502293.810836"
+            timestampString = "549742019.511719"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -56,7 +56,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "apnea/DataSource/CO2TrainingTableViewDataSource.swift"
-            timestampString = "541502293.814845"
+            timestampString = "549742019.511778"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -72,7 +72,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "apnea/DataSource/CO2TrainingTableViewDataSource.swift"
-            timestampString = "541502309.178686"
+            timestampString = "549742019.511821"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -94,6 +94,22 @@
             startingLineNumber = "29"
             endingLineNumber = "29"
             landmarkName = "curryIntervalValue(interval:storeKey:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "apnea/ViewController/HistoryCO2TrainingViewController.swift"
+            timestampString = "549749824.408793"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

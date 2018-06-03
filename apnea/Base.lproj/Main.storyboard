@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y1W-gf-h5z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y1W-gf-h5z">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -238,10 +238,10 @@
             </objects>
             <point key="canvasLocation" x="-999.20000000000005" y="710.19490254872574"/>
         </scene>
-        <!--History CO2 Training View Controller-->
+        <!--History CO2 Training View Controller old-->
         <scene sceneID="Z3D-YP-RX9">
             <objects>
-                <tableViewController storyboardIdentifier="HistoryCO2TrainingVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9oV-V9-Enl" userLabel="History CO2 Training View Controller" customClass="HistoryCO2TrainingViewController" customModule="apnea" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="HistoryCO2TrainingVCold" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9oV-V9-Enl" userLabel="History CO2 Training View Controller old" customClass="HistoryCO2TrainingViewController" customModule="apnea" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gcg-mW-fzV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -291,6 +291,79 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0yZ-4Y-8e3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1616.8" y="993.55322338830592"/>
+        </scene>
+        <!--HistoryCO2 Training View Controller-->
+        <scene sceneID="ItJ-8p-F5L">
+            <objects>
+                <viewController storyboardIdentifier="HistoryCO2TrainingVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1T1-HL-cEC" customClass="HistoryCO2TrainingViewController" customModule="apnea" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="02G-yI-QzU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uT1-zb-5hO" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
+                                <rect key="frame" x="5" y="25" width="365" height="210"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="L2R-Rq-sdG">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HistoryCalendarCell" id="0mY-bR-oJ9" customClass="HistoryCalendarCellCollectionViewCell" customModule="apnea" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3W-RC-2oB">
+                                                    <rect key="frame" x="56" y="43" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="p3W-RC-2oB" firstAttribute="centerY" secondItem="0mY-bR-oJ9" secondAttribute="centerY" id="FtQ-6i-dVb"/>
+                                            <constraint firstItem="p3W-RC-2oB" firstAttribute="centerX" secondItem="0mY-bR-oJ9" secondAttribute="centerX" id="dvc-Iv-2B9"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="p3W-RC-2oB" id="90y-Sg-HZT"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="1T1-HL-cEC" id="iF6-Pl-9xW"/>
+                                    <outlet property="delegate" destination="1T1-HL-cEC" id="b1D-bv-Tiy"/>
+                                </connections>
+                            </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yDG-4X-z61">
+                                <rect key="frame" x="5" y="240" width="365" height="422"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yDG-4X-z61" firstAttribute="leading" secondItem="wMp-Ww-UZG" secondAttribute="leading" constant="5" id="02o-zp-vpm"/>
+                            <constraint firstItem="wMp-Ww-UZG" firstAttribute="trailing" secondItem="yDG-4X-z61" secondAttribute="trailing" constant="5" id="BtL-nc-aJA"/>
+                            <constraint firstItem="yDG-4X-z61" firstAttribute="top" secondItem="wMp-Ww-UZG" secondAttribute="top" constant="220" id="HDe-PE-haD"/>
+                            <constraint firstItem="wMp-Ww-UZG" firstAttribute="trailing" secondItem="uT1-zb-5hO" secondAttribute="trailing" constant="5" id="Oo4-da-QGB"/>
+                            <constraint firstItem="wMp-Ww-UZG" firstAttribute="bottom" secondItem="yDG-4X-z61" secondAttribute="bottom" constant="5" id="bRf-gV-KEg"/>
+                            <constraint firstItem="uT1-zb-5hO" firstAttribute="top" secondItem="wMp-Ww-UZG" secondAttribute="top" constant="5" id="iPi-aX-pzn"/>
+                            <constraint firstItem="uT1-zb-5hO" firstAttribute="leading" secondItem="wMp-Ww-UZG" secondAttribute="leading" constant="5" id="pe5-EW-uEy"/>
+                            <constraint firstItem="yDG-4X-z61" firstAttribute="top" secondItem="uT1-zb-5hO" secondAttribute="bottom" constant="5" id="qa9-s2-IBN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wMp-Ww-UZG"/>
+                    </view>
+                    <connections>
+                        <outlet property="calendarView" destination="uT1-zb-5hO" id="ukn-cM-IOu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A3l-Er-T2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2280.8000000000002" y="993.55322338830592"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="1Yf-9Q-Jhe">
