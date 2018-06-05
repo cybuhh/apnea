@@ -10,24 +10,22 @@ import UIKit
 import JTAppleCalendar
 
 class HistoryCO2TrainingViewController: UIViewController  {
-    //let viewModel = HistoryCO2TrainingViewModel()
-    //var viewControllerDataSource: HistoryCO2TrainingViewControllerDataSource?
-    //var viewControllerDelegate: HistoryCO2TrainingViewControllerDelegate?
+    let viewModel = HistoryCO2TrainingViewModel()
+    var viewControllerDataSource: HistoryCO2TrainingViewControllerDataSource?
+    var viewControllerDelegate: HistoryCO2TrainingViewControllerDelegate?
   
   @IBOutlet weak var calendarView: JTAppleCalendarView!
   let formatter = DateFormatter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        calendarView.calendarDelegate = self
-        calendarView.calendarDataSource = self
-        //viewControllerDataSource = HistoryCO2TrainingViewControllerDataSource(viewModel: viewModel)
-        //viewControllerDelegate = HistoryCO2TrainingViewControllerDelegate(viewModel: viewModel, didSelectCallback: { [weak self] (segueName) in
-        //    self?.performSegue(withIdentifier: segueName, sender: nil)
-        //})
+        viewControllerDataSource = HistoryCO2TrainingViewControllerDataSource(viewModel: viewModel)
+        viewControllerDelegate = HistoryCO2TrainingViewControllerDelegate(viewModel: viewModel, didSelectCallback: { [weak self] (segueName) in
+            self?.performSegue(withIdentifier: segueName, sender: nil)
+        })
         
-        //tableView.dataSource = viewControllerDataSource
-        //tableView.delegate = viewControllerDelegate
+        tableView.dataSource = viewControllerDataSource
+        tableView.delegate = viewControllerDelegate
     }
 }
 

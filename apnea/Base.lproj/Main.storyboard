@@ -246,42 +246,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryCO2TrainingCell" id="dbP-eG-hCk" customClass="HistoryCO2TrainingTableViewCell" customModule="apnea" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dbP-eG-hCk" id="hNZ-RD-Y03">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Training type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAY-4H-N0r" userLabel="Training type Label">
-                                            <rect key="frame" x="15" y="12" width="99.5" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIt-KK-RX7" userLabel="Date Label">
-                                            <rect key="frame" x="324" y="11" width="36" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="xIt-KK-RX7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hNZ-RD-Y03" secondAttribute="leading" constant="20" symbolic="YES" id="4hn-fv-RyF"/>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CAY-4H-N0r" secondAttribute="trailing" constant="20" symbolic="YES" id="CiJ-gB-l6s"/>
-                                        <constraint firstItem="CAY-4H-N0r" firstAttribute="centerY" secondItem="hNZ-RD-Y03" secondAttribute="centerY" id="L8K-By-UZa"/>
-                                        <constraint firstItem="xIt-KK-RX7" firstAttribute="centerY" secondItem="hNZ-RD-Y03" secondAttribute="centerY" id="jda-K6-l5S"/>
-                                        <constraint firstItem="CAY-4H-N0r" firstAttribute="leading" secondItem="hNZ-RD-Y03" secondAttribute="leading" constant="15" id="tdK-f5-5JM"/>
-                                        <constraint firstAttribute="trailing" secondItem="xIt-KK-RX7" secondAttribute="trailing" constant="15" id="v8T-Ss-MP5"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="dateLabel" destination="xIt-KK-RX7" id="2r8-6z-MLc"/>
-                                    <outlet property="typeLabel" destination="CAY-4H-N0r" id="vWx-zx-MtE"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="9oV-V9-Enl" id="hWi-Fg-6Li"/>
                             <outlet property="delegate" destination="9oV-V9-Enl" id="KvT-bv-YnT"/>
@@ -292,7 +256,7 @@
             </objects>
             <point key="canvasLocation" x="1616.8" y="993.55322338830592"/>
         </scene>
-        <!--HistoryCO2 Training View Controller-->
+        <!--Ib Calendar Data Source-->
         <scene sceneID="ItJ-8p-F5L">
             <objects>
                 <viewController storyboardIdentifier="HistoryCO2TrainingVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1T1-HL-cEC" customClass="HistoryCO2TrainingViewController" customModule="apnea" customModuleProvider="target" sceneMemberID="viewController">
@@ -318,7 +282,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3W-RC-2oB">
-                                                    <rect key="frame" x="56" y="43" width="42" height="21"/>
+                                                    <rect key="frame" x="4" y="14.5" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -335,13 +299,53 @@
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="1T1-HL-cEC" id="iF6-Pl-9xW"/>
-                                    <outlet property="delegate" destination="1T1-HL-cEC" id="b1D-bv-Tiy"/>
+                                    <outlet property="ibCalendarDataSource" destination="1T1-HL-cEC" id="X2u-FP-mEC"/>
+                                    <outlet property="ibCalendarDelegate" destination="1T1-HL-cEC" id="uOi-xE-jf5"/>
                                 </connections>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yDG-4X-z61">
                                 <rect key="frame" x="5" y="240" width="365" height="422"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryCO2TrainingCell" id="dbP-eG-hCk" customClass="HistoryCO2TrainingTableViewCell" customModule="apnea" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="365" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dbP-eG-hCk" id="hNZ-RD-Y03">
+                                            <rect key="frame" x="0.0" y="0.0" width="365" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Training type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAY-4H-N0r" userLabel="Training type Label">
+                                                    <rect key="frame" x="15" y="12" width="99.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIt-KK-RX7" userLabel="Date Label">
+                                                    <rect key="frame" x="314" y="11" width="36" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xIt-KK-RX7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hNZ-RD-Y03" secondAttribute="leading" constant="20" symbolic="YES" id="4hn-fv-RyF"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CAY-4H-N0r" secondAttribute="trailing" constant="20" symbolic="YES" id="CiJ-gB-l6s"/>
+                                                <constraint firstItem="CAY-4H-N0r" firstAttribute="centerY" secondItem="hNZ-RD-Y03" secondAttribute="centerY" id="L8K-By-UZa"/>
+                                                <constraint firstItem="xIt-KK-RX7" firstAttribute="centerY" secondItem="hNZ-RD-Y03" secondAttribute="centerY" id="jda-K6-l5S"/>
+                                                <constraint firstItem="CAY-4H-N0r" firstAttribute="leading" secondItem="hNZ-RD-Y03" secondAttribute="leading" constant="15" id="tdK-f5-5JM"/>
+                                                <constraint firstAttribute="trailing" secondItem="xIt-KK-RX7" secondAttribute="trailing" constant="15" id="v8T-Ss-MP5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="xIt-KK-RX7" id="2r8-6z-MLc"/>
+                                            <outlet property="typeLabel" destination="CAY-4H-N0r" id="vWx-zx-MtE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="1T1-HL-cEC" id="E6K-M0-bqQ"/>
+                                    <outlet property="delegate" destination="1T1-HL-cEC" id="eYy-nY-DNs"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -357,9 +361,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wMp-Ww-UZG"/>
                     </view>
-                    <connections>
-                        <outlet property="calendarView" destination="uT1-zb-5hO" id="ukn-cM-IOu"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3l-Er-T2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -425,7 +426,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iwf-Ua-3Ta" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828" y="995"/>
+            <point key="canvasLocation" x="484" y="700"/>
         </scene>
         <!--Apnea Test-->
         <scene sceneID="MKh-69-RcJ">

@@ -308,6 +308,7 @@
 				7116D173200B4D5600C1A2A4 /* Frameworks */,
 				7116D174200B4D5600C1A2A4 /* Resources */,
 				DACA3599C1EA6FB70DB0C310 /* [CP] Embed Pods Frameworks */,
+				DFAA5173A5E48158BADB8993 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -417,6 +418,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-apnea/Pods-apnea-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFAA5173A5E48158BADB8993 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-apnea/Pods-apnea-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
