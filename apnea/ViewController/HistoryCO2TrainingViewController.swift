@@ -10,11 +10,14 @@ import UIKit
 import JTAppleCalendar
 
 class HistoryCO2TrainingViewController: UIViewController  {
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var calendarView: JTAppleCalendarView!
+
+  
     let viewModel = HistoryCO2TrainingViewModel()
     var viewControllerDataSource: HistoryCO2TrainingViewControllerDataSource?
     var viewControllerDelegate: HistoryCO2TrainingViewControllerDelegate?
   
-  @IBOutlet weak var calendarView: JTAppleCalendarView!
   let formatter = DateFormatter()
 
     override func viewDidLoad() {
@@ -62,6 +65,4 @@ extension HistoryCO2TrainingViewController: JTAppleCalendarViewDelegate, JTApple
     let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate)
     return parameters
   }
-  
-  
 }
