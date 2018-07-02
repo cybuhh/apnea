@@ -9,8 +9,6 @@
 import UIKit
 
 class UITimeLabel: UILabel {
-    let dateFormater=DateComponentsFormatter()
-
     override init(frame: CGRect) {
         super.init(frame: frame)
     }

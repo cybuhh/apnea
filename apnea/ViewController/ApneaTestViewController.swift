@@ -14,7 +14,6 @@ class ApneaTestViewController: UIViewController, MZTimerLabelDelegate {
     var spokenTime = 0
     var stopwatch: MZTimerLabel!
     var apenaHistoryDataStore: HistoryApneaTestDataStore!
-    let dateFormater=DateComponentsFormatter()
 
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
@@ -40,7 +39,7 @@ class ApneaTestViewController: UIViewController, MZTimerLabelDelegate {
         UIApplication.shared.isIdleTimerDisabled = false
 
         let newInterval = stopwatch.getTimeCounted()
-        let utterance = AVSpeechUtterance(string: dateFormater.string(from: newInterval)!)
+        let utterance = AVSpeechUtterance(string: TimeIntervalFormater.sharedInstance.format(from: newInterval)!)
         utterance.rate = 0.4
         utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
         
@@ -64,10 +63,6 @@ class ApneaTestViewController: UIViewController, MZTimerLabelDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        dateFormater.unitsStyle = .full
-        dateFormater.allowedUnits = [.minute, .second]
-        dateFormater.zeroFormattingBehavior = [ .dropAll ]
 
         apenaHistoryDataStore = HistoryApneaTestDataStore()
 
@@ -95,7 +90,7 @@ class ApneaTestViewController: UIViewController, MZTimerLabelDelegate {
                     (spokenTime > 180 && spokenTime < 240) && spokenTime % 15 == 0 ||
                     spokenTime > 240 && spokenTime % 10 == 0) {
                     
-                    let utterance = AVSpeechUtterance(string: dateFormater.string(from: time)!)
+                    let utterance = AVSpeechUtterance(string: TimeIntervalFormater.sharedInstance.format(from: time)!)
                     utterance.rate = 0.4
                     utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
                     

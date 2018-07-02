@@ -15,7 +15,6 @@ class CO2TrainingViewController: UIViewController, MZTimerLabelDelegate {
     var activeRow = 0
     var co2TrainingTableViewDataSource: CO2TrainingTableViewDataSource?
     var stopwatch: MZTimerLabel!
-    let dateFormater=DateComponentsFormatter()
     var co2TrainingHistoryDataStore: HistoryCO2TrainingDataStore!
     let trainingType = HistoryCO2TrainingType.co2
 
@@ -95,10 +94,6 @@ class CO2TrainingViewController: UIViewController, MZTimerLabelDelegate {
         stopButton.isHidden = true
         nextButton.isHidden = true
         resetButton.isHidden = true
-
-        dateFormater.unitsStyle = .full
-        dateFormater.allowedUnits = [.minute, .second]
-        dateFormater.zeroFormattingBehavior = [ .dropAll ]
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -129,7 +124,7 @@ class CO2TrainingViewController: UIViewController, MZTimerLabelDelegate {
                 spokenTime < 120 && spokenTime % 30 == 0 ||
                 (spokenTime < 60 && spokenTime > 30) && spokenTime % 15 == 0 ||
                 spokenTime < 30 && spokenTime % 10 == 0) {
-                let utterance = AVSpeechUtterance(string: dateFormater.string(from: time)!)
+                let utterance = AVSpeechUtterance(string: TimeIntervalFormater.sharedInstance.format(from: time)!)
                 utterance.rate = 0.4
                 utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
                 
