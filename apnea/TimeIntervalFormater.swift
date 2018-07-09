@@ -12,14 +12,19 @@ class TimeIntervalFormater {
     let dateFormater=DateComponentsFormatter()
 
     init() {
-        dateFormater.unitsStyle = .abbreviated
-        dateFormater.allowedUnits = [.minute, .second]
-        dateFormater.zeroFormattingBehavior = [ .dropAll ]
+      var calendar = Calendar.current
+      calendar.locale = Locale(identifier: "en")
+      dateFormater.calendar = calendar
+      
+      dateFormater.unitsStyle = .abbreviated
+      dateFormater.allowedUnits = [.minute, .second]
+      dateFormater.zeroFormattingBehavior = [ .dropAll ]
     }
     
     static let sharedInstance = TimeIntervalFormater()
 
-    func format(from interval: TimeInterval) -> String? {
-        return dateFormater.string(from: interval)
-    }
+  func format(from interval: TimeInterval, style unitsStyle: DateComponentsFormatter.UnitsStyle! = .abbreviated) -> String? {
+    dateFormater.unitsStyle = unitsStyle
+    return dateFormater.string(from: interval)
+  }
 }
