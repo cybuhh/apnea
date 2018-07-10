@@ -80,7 +80,7 @@ class CO2TrainingViewController: UIViewController, MZTimerLabelDelegate {
     super.viewDidLoad()
     
     let settingsDataStore = SettingsDataStore()
-    let viewModel = CO2TrainingViewModel(
+    viewModel = CO2TrainingViewModel(
       rounds: settingsDataStore.get(forType: .rounds),
       forApneaTime: settingsDataStore.get(forType: .maxTime),
       startingFromRespirationTime: settingsDataStore.get(forType: .respirationStart),
@@ -100,6 +100,8 @@ class CO2TrainingViewController: UIViewController, MZTimerLabelDelegate {
     stopButton.isHidden = true
     nextButton.isHidden = true
     resetButton.isHidden = true
+    
+    setActiveRound(atRow: 0)
   }
   
   override func viewWillDisappear(_ animated: Bool) {

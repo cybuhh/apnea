@@ -10,5 +10,5 @@ target 'apnea' do
   # Pods for apnea
   pod 'MZTimerLabel', '~> 0.5.4'
   pod 'JTAppleCalendar', '~> 7.0'
-  pod 'Charts'
+  pod 'Charts', '~> 3.1.1'
 end
