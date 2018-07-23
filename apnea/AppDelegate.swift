@@ -14,16 +14,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        /*window?.backgroundColor = ColorSchema.background
-        window?.tintColor = ColorSchema.tint
 
-        UIView.appearance().backgroundColor = ColorSchema.background
-        UIView.appearance().tintColor = ColorSchema.tint
-        UITableView.appearance().backgroundColor = ColorSchema.background
-        UITableView.appearance().tintColor = ColorSchema.tint
-        UITableViewCell.appearance().backgroundColor = ColorSchema.background
-        UITableViewCell.appearance().tintColor = ColorSchema.tint*/
-        return true
+        /*let colorSchema = ColorSchema.dark
+        //window?.backgroundColor = colorSchema.background
+        //window?.tintColor = colorSchema.background
+        UIWindow.appearance().backgroundColor = colorSchema.text
+        UIWindow.appearance().tintColor = colorSchema.text
+
+        UIView.appearance().backgroundColor = colorSchema.text
+        UIView.appearance().tintColor = colorSchema.text
+        UILabel.appearance().backgroundColor = colorSchema.background
+        UILabel.appearance().tintColor = colorSchema.text
+        UIButton.appearance().backgroundColor = colorSchema.background
+        UIButton.appearance().tintColor = colorSchema.text
+        UITableView.appearance().backgroundColor = colorSchema.background
+        UITableView.appearance().tintColor = colorSchema.text
+        UITableViewCell.appearance().backgroundColor = colorSchema.background
+        UITableViewCell.appearance().tintColor = colorSchema.text*/
+
+      return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

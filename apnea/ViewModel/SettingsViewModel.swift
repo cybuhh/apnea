@@ -64,7 +64,16 @@ class SettingsViewModel {
                                      value: dataStore.get(forType: .decraseTime),
                                      storeKey: .decraseTime)
                 ]
-            )
+            ),
+            SettingsSectionItem(
+              text: "UI",
+              rows: [
+                SettingsMenuItem(text: "Dark mode",
+                                 type: .option,
+                                 value: dataStore.get(forType: .darkMode),
+                                 storeKey: .darkMode)
+              ]
+            ),
         ]
     }
 }

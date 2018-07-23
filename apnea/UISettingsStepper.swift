@@ -11,6 +11,7 @@ import UIKit
 enum UISettingsType {
   case interval
   case value
+  case option
 }
 
 class UISettingsStepper: UIStepper {

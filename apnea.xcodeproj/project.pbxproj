@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F3BC664208F0CBD00A0B363 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3BC663208F0CBD00A0B363 /* SettingsTableViewCell.swift */; };
+		4F0B3A4D2101CF1A001BEFE6 /* Speak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0B3A4C2101CF1A001BEFE6 /* Speak.swift */; };
+		4F0B3A4F2101E65B001BEFE6 /* SettingsSwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0B3A4E2101E65B001BEFE6 /* SettingsSwitchTableViewCell.swift */; };
+		4F0B3A532101FB14001BEFE6 /* UISettingsSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0B3A522101FB14001BEFE6 /* UISettingsSwitch.swift */; };
+		4F0B3A5521021DA1001BEFE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0B3A5421021DA1001BEFE6 /* ViewController.swift */; };
+		4F3BC664208F0CBD00A0B363 /* SettingsStepperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3BC663208F0CBD00A0B363 /* SettingsStepperTableViewCell.swift */; };
 		4F43561C2093213A008BB76C /* apneaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F43561B2093213A008BB76C /* apneaTests.swift */; };
 		4F625BAF20A1F1E800291703 /* AbstractHistoryDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F625BAE20A1F1E800291703 /* AbstractHistoryDataStore.swift */; };
 		4F6842402092ED8100F1462B /* UISettingsStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F68423F2092ED8100F1462B /* UISettingsStepper.swift */; };
@@ -60,7 +64,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4F3BC663208F0CBD00A0B363 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		4F0B3A4C2101CF1A001BEFE6 /* Speak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speak.swift; sourceTree = "<group>"; };
+		4F0B3A4E2101E65B001BEFE6 /* SettingsSwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwitchTableViewCell.swift; sourceTree = "<group>"; };
+		4F0B3A522101FB14001BEFE6 /* UISettingsSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISettingsSwitch.swift; sourceTree = "<group>"; };
+		4F0B3A5421021DA1001BEFE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4F3BC663208F0CBD00A0B363 /* SettingsStepperTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStepperTableViewCell.swift; sourceTree = "<group>"; };
 		4F4356192093213A008BB76C /* apneaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = apneaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F43561B2093213A008BB76C /* apneaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apneaTests.swift; sourceTree = "<group>"; };
 		4F43561D2093213A008BB76C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -171,6 +179,7 @@
 				7116D191200EA48B00C1A2A4 /* HistoryViewController.swift */,
 				7116D18B200EA37D00C1A2A4 /* RootViewController.swift */,
 				7116D18F200EA45900C1A2A4 /* SettingsViewController.swift */,
+				4F0B3A5421021DA1001BEFE6 /* ViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -200,7 +209,8 @@
 				4FBDA66320453BF600174C9C /* CO2TrainingTableViewCell.swift */,
 				4FE6C02D2018BFA7008A038A /* HistoryApneaTestTableViewCell.swift */,
 				7181C05A20712A32007160CC /* HistoryCO2TrainingTableViewCell.swift */,
-				4F3BC663208F0CBD00A0B363 /* SettingsTableViewCell.swift */,
+				4F3BC663208F0CBD00A0B363 /* SettingsStepperTableViewCell.swift */,
+				4F0B3A4E2101E65B001BEFE6 /* SettingsSwitchTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -245,7 +255,9 @@
 				4F7CEA27208F457D00F49C03 /* UITimeLabel.swift */,
 				4FD3E6B820909EAA0008AFE4 /* TimeIntervalFormater.swift */,
 				4F68423F2092ED8100F1462B /* UISettingsStepper.swift */,
+				4F0B3A522101FB14001BEFE6 /* UISettingsSwitch.swift */,
 				4FD6308120C45FAF00B638FD /* CalendarCell */,
+				4F0B3A4C2101CF1A001BEFE6 /* Speak.swift */,
 			);
 			path = apnea;
 			sourceTree = "<group>";
@@ -308,7 +320,6 @@
 				7116D173200B4D5600C1A2A4 /* Frameworks */,
 				7116D174200B4D5600C1A2A4 /* Resources */,
 				DACA3599C1EA6FB70DB0C310 /* [CP] Embed Pods Frameworks */,
-				9A40B19AB896DDBADCFA7921 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -400,21 +411,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9A40B19AB896DDBADCFA7921 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-apnea/Pods-apnea-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DACA3599C1EA6FB70DB0C310 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -454,6 +450,7 @@
 			files = (
 				4FBDA67820455ABD00174C9C /* CO2TrainingViewModel.swift in Sources */,
 				71B64C3A2039ECE20038B839 /* CO2TrainingViewController.swift in Sources */,
+				4F0B3A4F2101E65B001BEFE6 /* SettingsSwitchTableViewCell.swift in Sources */,
 				4F7CEA28208F457D00F49C03 /* UITimeLabel.swift in Sources */,
 				7116D18E200EA42100C1A2A4 /* ApneaTestViewController.swift in Sources */,
 				4F6842402092ED8100F1462B /* UISettingsStepper.swift in Sources */,
@@ -462,6 +459,7 @@
 				4FBDA6662045572800174C9C /* HistoryApneaViewModel.swift in Sources */,
 				7181C05920710D6A007160CC /* HistoryCO2TrainingViewControllerDataSource.swift in Sources */,
 				7116D17A200B4D5600C1A2A4 /* AppDelegate.swift in Sources */,
+				4F0B3A4D2101CF1A001BEFE6 /* Speak.swift in Sources */,
 				7181C057207109F8007160CC /* HistoryCO2TrainingViewControllerDelegate.swift in Sources */,
 				7152C4BD2014BE5000B558CD /* HistoryApneaTestViewController.swift in Sources */,
 				7181C05B20712A32007160CC /* HistoryCO2TrainingTableViewCell.swift in Sources */,
@@ -470,11 +468,13 @@
 				4FBDA67620455A9D00174C9C /* CO2TrainingTableViewDataSource.swift in Sources */,
 				71016275209273B7008F1567 /* SettingsDataStore.swift in Sources */,
 				4FE6C02E2018BFA8008A038A /* HistoryApneaTestTableViewCell.swift in Sources */,
+				4F0B3A5521021DA1001BEFE6 /* ViewController.swift in Sources */,
 				4FBDA66420453BF600174C9C /* CO2TrainingTableViewCell.swift in Sources */,
+				4F0B3A532101FB14001BEFE6 /* UISettingsSwitch.swift in Sources */,
 				714DA089206FB737002F05FB /* HistoryApneaTestDataStore.swift in Sources */,
 				7116D18C200EA37D00C1A2A4 /* RootViewController.swift in Sources */,
 				4FBDA6682045574F00174C9C /* RootViewModel.swift in Sources */,
-				4F3BC664208F0CBD00A0B363 /* SettingsTableViewCell.swift in Sources */,
+				4F3BC664208F0CBD00A0B363 /* SettingsStepperTableViewCell.swift in Sources */,
 				4FBDA66E204557C700174C9C /* RootViewControllerDelegate.swift in Sources */,
 				7116D194200EA9E800C1A2A4 /* MenuItem.swift in Sources */,
 				4F625BAF20A1F1E800291703 /* AbstractHistoryDataStore.swift in Sources */,

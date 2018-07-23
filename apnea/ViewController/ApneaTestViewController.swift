@@ -8,7 +8,6 @@
 
 import UIKit
 import MZTimerLabel
-import AVFoundation
 
 class ApneaTestViewController: UIViewController, MZTimerLabelDelegate {
   var spokenTime = 0
@@ -30,6 +29,7 @@ class ApneaTestViewController: UIViewController, MZTimerLabelDelegate {
     resetButton.isHidden = true
     UIApplication.shared.isIdleTimerDisabled = true
   }
+
   @IBAction func stopButtonClicked(_ sender: UIButton) {
     stopwatch.pause()
     startButton.isHidden = true
@@ -38,16 +38,7 @@ class ApneaTestViewController: UIViewController, MZTimerLabelDelegate {
     resetButton.isHidden = false
     UIApplication.shared.isIdleTimerDisabled = false
     
-    let newInterval = stopwatch.getTimeCounted()
-    let utterance = AVSpeechUtterance(string:
-      TimeIntervalFormater.sharedInstance.format(
-        from: newInterval,
-        style: DateComponentsFormatter.UnitsStyle.full)!)
-    utterance.rate = 0.4
-    utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-    
-    let synthesizer = AVSpeechSynthesizer()
-    synthesizer.speak(utterance)
+    Speak.sharedInstance.interval(stopwatch.getTimeCounted())
   }
   
   @IBAction func resetButtonClicked(_ sender: UIButton) {
@@ -111,19 +102,13 @@ class ApneaTestViewController: UIViewController, MZTimerLabelDelegate {
       let currentTime = Int(time)
       if (spokenTime != currentTime) {
         spokenTime = currentTime
-        if (spokenTime > 0 && spokenTime % 60 == 0 ||
-          spokenTime > 120 && spokenTime % 30 == 0 ||
-          (spokenTime > 180 && spokenTime < 240) && spokenTime % 15 == 0 ||
-          spokenTime > 240 && spokenTime % 10 == 0) {
-          
-          let utterance = AVSpeechUtterance(string: TimeIntervalFormater.sharedInstance.format(from: time)!)
-          utterance.rate = 0.4
-          utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-          
-          let synthesizer = AVSpeechSynthesizer()
-          synthesizer.speak(utterance)
-          
-          print("\(currentTime)")
+        if (
+            (spokenTime > 0 && (spokenTime % 60 == 0 || spokenTime % 90 == 0)) ||
+            (spokenTime > 120 && spokenTime % 30 == 0) ||
+            (spokenTime > 180 && spokenTime < 240) && spokenTime % 15 == 0 ||
+            (spokenTime > 240 && spokenTime % 10 == 0)
+          ) {
+          Speak.sharedInstance.interval(time)
         }
       }
     }

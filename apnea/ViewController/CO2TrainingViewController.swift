@@ -8,7 +8,6 @@
 
 import UIKit
 import MZTimerLabel
-import AVFoundation
 
 class CO2TrainingViewController: UIViewController, MZTimerLabelDelegate {
   var spokenTime = 0
@@ -128,16 +127,13 @@ class CO2TrainingViewController: UIViewController, MZTimerLabelDelegate {
     let currentTime = Int(time)
     if (spokenTime != currentTime) {
       spokenTime = currentTime
-      if (spokenTime % 60 == 0 ||
-        spokenTime < 120 && spokenTime % 30 == 0 ||
-        (spokenTime < 60 && spokenTime > 30) && spokenTime % 15 == 0 ||
-        spokenTime < 30 && spokenTime % 10 == 0) {
-        let utterance = AVSpeechUtterance(string: TimeIntervalFormater.sharedInstance.format(from: time, style: .full)!)
-        utterance.rate = 0.4
-        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-        
-        let synthesizer = AVSpeechSynthesizer()
-        synthesizer.speak(utterance)
+      if (
+          (spokenTime % 60 == 0) ||
+          (spokenTime < 120 && spokenTime % 30 == 0) ||
+          ((spokenTime < 60 && spokenTime > 30) && spokenTime % 15 == 0) ||
+          (spokenTime < 30 && spokenTime % 10 == 0)
+        ) {
+        Speak.sharedInstance.interval(time)
         
         NSLog("\(currentTime)")
       }

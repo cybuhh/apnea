@@ -9,7 +9,12 @@
 import Foundation
 import UIKit
 
-class ColorSchema {
-  static let background = UIColor(red: 0, green: 0, blue: 255, alpha: 0.7)
-  static let tint = UIColor(red: 255, green: 0, blue: 0, alpha: 0.7)
+struct ColorSchema {
+  var background: UIColor
+  var text: UIColor
+}
+
+class ColorTheme {
+  static let light = ColorSchema(background: .white, text: .black)
+  static let dark = ColorSchema(background: .black, text: .white)
 }

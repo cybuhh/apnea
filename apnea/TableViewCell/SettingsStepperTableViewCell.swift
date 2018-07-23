@@ -1,5 +1,5 @@
 //
-//  SettingsTableViewCell.swift
+//  SettingsStepperTableViewCell.swift
 //  apnea
 //
 //  Created by matcybur on 24/04/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsTableViewCell: UITableViewCell {
+class SettingsStepperTableViewCell: UITableViewCell {
   @IBOutlet weak var typeLabel: UILabel!
   @IBOutlet weak var valueLabel: UITimeLabel!
   @IBOutlet weak var valueStepper: UISettingsStepper!
@@ -33,12 +33,12 @@ class SettingsTableViewCell: UITableViewCell {
   
   override func awakeFromNib() {
     super.awakeFromNib()
-      // Initialization code
+    // Initialization code
   }
-
+  
   override func setSelected(_ selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)
-
+    
     // Configure the view for the selected state
   }
 }

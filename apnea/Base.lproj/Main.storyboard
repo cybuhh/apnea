@@ -188,7 +188,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsMenuCell" id="yBJ-7L-dM4" customClass="SettingsTableViewCell" customModule="apnea" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsCellStepper" id="yBJ-7L-dM4" customClass="SettingsStepperTableViewCell" customModule="apnea" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yBJ-7L-dM4" id="i7N-Iy-TJB">
@@ -198,7 +198,7 @@
                                         <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="9999" translatesAutoresizingMaskIntoConstraints="NO" id="iCk-8l-npg" customClass="UISettingsStepper" customModule="apnea" customModuleProvider="target">
                                             <rect key="frame" x="271" y="7.5" width="94" height="29"/>
                                             <connections>
-                                                <action selector="stepperValueChanged:forEvent:" destination="yBJ-7L-dM4" eventType="valueChanged" id="Xrl-GO-feg"/>
+                                                <action selector="stepperValueChanged:forEvent:" destination="yBJ-7L-dM4" eventType="valueChanged" id="y2o-XI-ByL"/>
                                             </connections>
                                         </stepper>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1Q-GK-yiJ" customClass="UITimeLabel" customModule="apnea" customModuleProvider="target">
@@ -227,9 +227,53 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="typeLabel" destination="obn-HT-jWr" id="gjv-qi-mq9"/>
+                                    <outlet property="typeLabel" destination="obn-HT-jWr" id="D73-Jp-RUx"/>
                                     <outlet property="valueLabel" destination="Y1Q-GK-yiJ" id="sWp-2Y-AEe"/>
-                                    <outlet property="valueStepper" destination="iCk-8l-npg" id="nhN-iC-LDL"/>
+                                    <outlet property="valueStepper" destination="iCk-8l-npg" id="TAw-Il-sSH"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsCellSwitch" id="7Fy-MO-dXM" customClass="SettingsSwitchTableViewCell" customModule="apnea" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Fy-MO-dXM" id="ffF-S1-wqc">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byG-ov-DWs" customClass="UITimeLabel" customModule="apnea" customModuleProvider="target">
+                                            <rect key="frame" x="220" y="11" width="41" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F90-cp-NAW">
+                                            <rect key="frame" x="10" y="11" width="34" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LDG-Bf-uxe" customClass="UISettingsSwitch" customModule="apnea" customModuleProvider="target">
+                                            <rect key="frame" x="293" y="6" width="51" height="31"/>
+                                            <connections>
+                                                <action selector="switchValueChanged:" destination="7Fy-MO-dXM" eventType="valueChanged" id="ag9-d3-KUn"/>
+                                            </connections>
+                                        </switch>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="byG-ov-DWs" secondAttribute="trailing" constant="114" id="7sp-Rh-Sf2"/>
+                                        <constraint firstItem="LDG-Bf-uxe" firstAttribute="centerY" secondItem="ffF-S1-wqc" secondAttribute="centerY" id="JKo-vW-CH1"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="F90-cp-NAW" secondAttribute="trailing" constant="20" symbolic="YES" id="NWn-ec-Iiz"/>
+                                        <constraint firstAttribute="bottom" secondItem="F90-cp-NAW" secondAttribute="bottom" constant="11.5" id="QKy-8I-nHk"/>
+                                        <constraint firstItem="byG-ov-DWs" firstAttribute="centerY" secondItem="ffF-S1-wqc" secondAttribute="centerY" id="TuF-y2-l8a"/>
+                                        <constraint firstAttribute="trailing" secondItem="LDG-Bf-uxe" secondAttribute="trailing" constant="33" id="UZ1-Mv-XzQ"/>
+                                        <constraint firstItem="byG-ov-DWs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ffF-S1-wqc" secondAttribute="leading" id="e6x-Tq-v89"/>
+                                        <constraint firstItem="F90-cp-NAW" firstAttribute="top" secondItem="ffF-S1-wqc" secondAttribute="top" constant="11" id="llh-mJ-xVH"/>
+                                        <constraint firstItem="F90-cp-NAW" firstAttribute="leading" secondItem="ffF-S1-wqc" secondAttribute="leading" constant="10" id="yyv-Kk-Hod"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="typeLabel" destination="F90-cp-NAW" id="1e1-IH-71D"/>
+                                    <outlet property="valueLabel" destination="byG-ov-DWs" id="ajy-HW-yut"/>
+                                    <outlet property="valueSwitch" destination="LDG-Bf-uxe" id="gwc-vW-roe"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

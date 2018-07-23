@@ -28,7 +28,7 @@ class CO2TrainingViewModel {
     
         for round in 1...rounds {
             rows.append(CO2TrainingCell(round: round, interval: TimeInterval(startTime - (decreseTime * (round-1) ))))
-            rows.append(CO2TrainingCell(round: round, interval: TimeInterval(apneaTime)))
+            rows.append(CO2TrainingCell(round: round, interval: TimeInterval(startTime)))
         }
     }
     
